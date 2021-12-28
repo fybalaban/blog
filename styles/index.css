@@ -1,0 +1,11 @@
+#showcase{
+    margin: 0 24px 0 24px;
+}
+
+#showcase > h1{
+    font-size: 36px;
+}
+
+#showcase > p{
+    font-size: 16px;
+}
