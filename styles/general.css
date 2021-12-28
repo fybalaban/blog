@@ -1,0 +1,143 @@
+@import url('https://fonts.googleapis.com/css2?family=Inconsolata&display=swap');
+
+html, body{
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    background: black;
+    font-family: Tahoma, Helvetica, Verdana, sans-serif;
+}
+
+.container{
+    height: 100vh;
+
+    display: grid;
+    grid-template-rows: auto 1fr auto;
+    grid-template-columns: 1fr 1000px 1fr;
+    grid-template-areas: 'header' 'content' 'footer';
+    grid-row-end: -1;
+    grid-auto-rows: 1fr;
+    grid-gap: 0;
+}
+
+.float_right{
+    float: right;
+}
+
+.float_left{
+    float: left;
+}
+
+.monospaced{
+    font-family: 'Inconsolata', monospace;
+}
+
+#left_column{
+    background: black;
+    grid-column: 1;
+}
+
+#header{
+    grid-area: header;
+    grid-column: 2;
+
+    padding: 10px;
+    background: #2F4F4F;
+}
+
+.navbar_item {
+    color: lavender;
+    text-align: center;
+    margin: 12px;
+    padding: 0;
+    text-decoration: none;
+    font-size: 18px;
+    line-height: 25px;
+    border-radius: 4px;
+}
+
+.navbar_item:hover{
+    color: cornsilk;
+}
+
+#logo_photo{
+    float: left;
+    text-align: left;
+    border-radius: 50%;
+    border: solid 1px aliceblue;
+    width: 48px;
+}
+
+#logo{
+    float: left;
+    margin: 0;
+    padding: 12px 0 0 12px;
+    font-size: 24px;
+    font-weight: bold;
+    text-align: left;
+    color: aliceblue;
+}
+
+#logo_bottom{
+    margin: 0;
+    padding: 0 0 0 12px;
+    font-size: 12px;
+    font-weight: lighter;
+    text-align: left;
+    color: aliceblue;
+}
+
+#content {
+    grid-area: content;
+    grid-column: 2;
+
+    background: cornsilk;
+}
+
+#footer{
+    grid-area: footer;
+    grid-column: 2;
+
+    margin: 0;
+    padding: 5px;
+
+    background: #2F4F4F;
+    text-align: center;
+}
+
+#footer > h2{
+    margin: inherit;
+    padding: 0;
+
+    color: aliceblue;
+}
+
+#footer > hr{
+    border: none;
+    border-top: 1px solid aliceblue;
+    color: #333;
+    overflow: visible;
+    height: 1px;
+}
+
+#footer > h4{
+    margin: inherit;
+    padding: 0;
+    color: floralwhite;
+}
+
+#footer > h4 > a{
+    text-decoration: none;
+    color: floralwhite;
+}
+
+#footer > h4 > a:hover{
+    text-decoration: none;
+    color: aquamarine;
+}
+
+#right_column{
+    background: black;
+    grid-column: 3;
+}
