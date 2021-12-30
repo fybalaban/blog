@@ -9,3 +9,8 @@
 #showcase > p{
     font-size: 16px;
 }
+
+.social_button{
+    border: solid 1px aliceblue;
+    width: 100px;
+}
