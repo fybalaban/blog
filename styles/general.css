@@ -91,6 +91,7 @@ html, body{
 #content {
     grid-area: content;
     grid-column: 2;
+    padding: 0 24px 0 24px;
 
     background: cornsilk;
 }

@@ -1,5 +1,5 @@
 #showcase{
-    margin: 0 24px 0 24px;
+    margin: 0;
 }
 
 #showcase > h1{
@@ -11,6 +11,50 @@
 }
 
 .social_button{
-    border: solid 1px aliceblue;
-    width: 100px;
+    float: left;
+    background: inherit;
+    width: fit-content;
+    border: #AAAAAA 1px solid;
+    border-radius: 5px;
+    margin: 0 4px 24px 0;
 }
+
+.social_button > a{
+    text-decoration: none;
+}
+
+.social_button > a:hover{
+    text-decoration: underline;
+}
+
+.social_button > a > h2{
+    float: left;
+    font-size: 21px;
+    margin: 14px 4px 14px 8px;
+    padding: 0;
+}
+
+.social_button > a > img{
+    width: 50px;
+    height: 50px;
+    margin: 0 0 0 2px;
+    padding: 0;
+    float: left;
+}
+
+.blog_list{
+    list-style-type: none;
+    padding: 0;
+}
+
+.blog_list_item{
+    font-size: 16px;
+}
+
+.blog_list_item > a{
+    text-decoration: none;
+}
+
+.blog_list_item > a:hover{
+    text-decoration: underline;
+ }
