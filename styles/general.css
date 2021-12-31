@@ -21,6 +21,32 @@ html, body{
     grid-gap: 0;
 }
 
+@media(max-width: 1000px){
+    .container{
+        grid-template-columns: 1fr;
+    }
+}
+
+@media(max-width: 745px){
+    li > .navbar_item{
+        margin: 6px;
+        font-size: 16px;
+        flex-wrap: wrap;
+    }
+}
+
+@media(max-width: 660px){
+    li > .navbar_item{
+        flex-wrap: wrap;
+        float: left;
+        display: inline-flex;
+    }
+
+    #header > ul{
+        float: left;
+    }
+}
+
 .float_right{
     float: right;
 }
@@ -44,6 +70,14 @@ html, body{
 
     padding: 10px;
     background: #2F4F4F;
+}
+
+.navbar_list{
+    list-style-type: none;
+    display: inline-flex;
+    margin: 12px 0 0 0;
+    padding: 0;
+    overflow: hidden;
 }
 
 .navbar_item {
