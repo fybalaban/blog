@@ -5,27 +5,18 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Lorem Ipsum</title>
     <link type="text/css" rel="stylesheet" href="../styles/general.css">
+    <script src="https://code.jquery.com/jquery-3.5.0.js"></script>
+    <script>
+        $(function(){
+            $("#header").load("../headerD.html");
+            $("#footer").load("../footer.html");
+        });
+    </script>
 </head>
 <body>
 <div class="container">
     <div id="left_column"></div> <!-- Left black box -->
-    <div id="header">
-        <table class="float_left">
-            <tr>
-                <td rowspan="2"><img id="logo_photo" src="../images/photo.jpg" alt="A cute picture of me"></td>
-                <td><a id="logo" class="navbar_item">Ferit Yiğit BALABAN</a></td>
-            </tr>
-            <tr>
-                <td><h5 id="logo_bottom">Bilgisayar Mühendisliği öğrencisi</h5></td>
-            </tr>
-        </table>
-        <ul class="navbar_list float_right">
-            <li><a class="navbar_item" href="../index.html">Ana sayfa</a></li>
-            <li><a class="navbar_item" href="../projects.html">Projelerim</a></li>
-            <li><a class="navbar_item" href="../resume.html">Online Resume</a></li>
-            <li><a class="navbar_item" href="../blog.html">Blog</a></li>
-        </ul>
-    </div>
+    <div id="header">JQuery content not loaded, your connection might be weak.</div>
     <div id="content">
         <h1>
             Lorem Ipsum
@@ -36,11 +27,7 @@
             Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus aliquid assumenda aut blanditiis commodi cumque dicta, esse fugit, id in nam nisi nobis similique veniam voluptatem. Eaque fugiat quae tenetur?
         </p>
     </div>
-    <div id="footer">
-        <h2>2021 🄯 Ferit Yiğit BALABAN</h2>
-        <hr>
-        <h4 class="monospaced">Check the code on GitHub: <a href="https://github.com/fybalaban/blog">https://github.com/fybalaban/blog</a></h4>
-    </div>
+    <div id="footer">JQuery content not loaded, your connection might be weak.</div>
     <div id="right_column"></div> <!-- Right black box -->
 </div>
 </body>
