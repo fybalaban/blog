@@ -1,0 +1,15 @@
+#content{
+    color: limegreen;
+    background-color: black;
+
+    font-family: 'Inconsolata', monospace;
+    font-size: 2vw;
+}
+
+a{
+    color: limegreen;
+}
+
+a:hover{
+    color: forestgreen;
+}
