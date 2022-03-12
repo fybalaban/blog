@@ -1,7 +1,6 @@
 /*
  *          Ferit Yigit BALABAN <fyb@duck.com>, 2022
  */
-
 let createdElements = 0;
 const speed = 25; /* Duration between each printed character */
 const banner =
@@ -17,8 +16,8 @@ const banner =
 window.onload = async function orchestrate() {
     let texts = [
         "Initializing boot...",
-        "Loading BALABAN OS on x31_69 host...",
-        "32 GiB of RAM detected...",
+        "Loading BALABAN OS on x86_64 host...",
+        "31 GiB of RAM detected...",
         "Launching interface...",
     ]
     await type(texts, true, 0.01);
@@ -27,7 +26,7 @@ window.onload = async function orchestrate() {
     texts = [
         banner,
         "# Looks like you've lost your way.",
-        "# Here, take this. *gives you a magic window*"
+        "# Here, take this. *hands you a magic window*"
     ]
     await type(texts);
     await ask("Go to homepage");
