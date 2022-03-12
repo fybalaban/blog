@@ -33,6 +33,7 @@ html, body {
 
 a{
     color: limegreen;
+    text-decoration: none;
 }
 
 a:hover{
