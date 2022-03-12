@@ -14,6 +14,10 @@ html, body {
     #container {
         grid-template-columns: 0 1fr 0;
     }
+
+    html, body{
+        zoom: 50%;
+    }
 }
 
 #left_column{
