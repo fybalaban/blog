@@ -1,3 +1,6 @@
+/*
+ *          Ferit Yiğit BALABAN <fyb@duck.com>, 2022
+ */
 window.onload = function orchestrator() {
     loadHeader();
     loadFooter();
@@ -30,7 +33,7 @@ function loadHeader() {
 <!-- This header is suitable for pages on root -->
 <table class="float_left">
     <tr>
-    <td rowspan="2"><img id="logo_photo" src="../images/photo.png" alt="A cute picture of me"></td>
+    <td rowspan="2"><img id="logo_photo" src="images/photo.png" alt="A cute picture of me"></td>
 <td><a id="logo" class="navbar_item">Ferit Yiğit BALABAN</a></td>
 </tr>
 <tr>

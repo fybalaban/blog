@@ -1,9 +1,6 @@
-// noinspection SpellCheckingInspection
-
 /*
  *          Ferit Yiğit BALABAN <fyb@duck.com>, 2022
  */
-
 let currentTextLanguage = "turkish"
 const uwuifyed_english = [
     "I'd juwst wike tuwu intewject fow a moment. Whawt uwu'we wefewing tuwu as Winyux, iws in fact, GNYU/Winyux, ow (・`ω´・) as I've wecentwy taken tuwu cawwing iwt, GNYU p-pwus Winyux. Winyux iws nyowt an opewating system unto itsewf, but wathew anyothew fwee componyent of a fuwwy functionying GNYU system made usefuw by the GNYU cowewibs, sheww utiwities awnd vitaw system componyents compwising a fuww os as definyed by POSIX.",
