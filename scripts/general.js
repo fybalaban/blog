@@ -1,7 +1,7 @@
-window.onload = function loadHeader() {
-    const pageLink = window.location.href;
-    let inSubfolder = pageLink.includes("projects") || pageLink.includes("posts")
+const pageLink = window.location.href;
+const inSubfolder = pageLink.includes("projects") || pageLink.includes("posts")
 
+window.onload = function loadHeader() {
     if (inSubfolder) {
         document.getElementById("header").innerHTML = "";
         document.getElementById("header").innerHTML = `
@@ -42,4 +42,12 @@ window.onload = function loadHeader() {
     <li><a class="navbar_item" href="blog.html">Blog</a></li>
 </ul>`;
     }
+}
+
+window.onload = function loadFooter() {
+    document.getElementById("footer").innerHTML = "";
+    document.getElementById("footer").innerHTML = `
+<h2>2022 🄯 Ferit Yiğit BALABAN</h2>
+<hr>
+<h4 class="monospaced">Created with <3 on <a href="https://www.jetbrains.com/webstorm/">JetBrains WebStorm</a> | Hosted with <3 on <a href="https://github.com/fybx/blog">GitHub</a></h4>`;
 }
