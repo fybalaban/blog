@@ -5,16 +5,6 @@ let createdElements = 0;
 let blinking_cursor = false;
 const speed = 10; /* Duration between each printed character */
 const banner =
-    ' ,,                   ,,           ,,                             \n' +
-    '*MM                 `7MM          *MM                             \n' +
-    ' MM                   MM           MM                             \n' +
-    ' MM,dMMb.   ,6"Yb.    MM   ,6"Yb.  MM,dMMb.   ,6"Yb.  `7MMpMMMb.  \n' +
-    ' MM    `Mb 8)   MM    MM  8)   MM  MM    `Mb 8)   MM    MM    MM  \n' +
-    ' MM     M8  ,pm9MM    MM   ,pm9MM  MM     M8  ,pm9MM    MM    MM  \n' +
-    ' MM.   ,M9 8M   MM    MM  8M   MM  MM.   ,M9 8M   MM    MM    MM  \n' +
-    ' P^YbmdP\'  `Moo9^Yo..JMML.`Moo9^Yo.P^YbmdP\'  `Moo9^Yo..JMML  JMML.'
-
-const banner2 =
     ' .o8                 oooo             .o8                                                    \n' +
     '"888                 `888            "888                                                    \n' +
     ' 888oooo.   .oooo.    888   .oooo.    888oooo.   .oooo.   ooo. .oo.        .ooooo.   .oooo.o \n' +
@@ -37,7 +27,7 @@ window.onload = async function orchestrate() {
     await sleep(1500);
     document.getElementById("content").innerHTML = '';
     texts = [
-        banner2,
+        banner,
         " ",
         "# Looks like you've lost your way.",
         "# Here, take this. *hands you a magic window*"

@@ -30,7 +30,7 @@ function loadHeader() {
 <!-- This header is suitable for pages on root -->
 <table class="float_left">
     <tr>
-    <td rowspan="2"><img id="logo_photo" src="images/photo.png" alt="A cute picture of me"></td>
+    <td rowspan="2"><img id="logo_photo" src="../images/photo.png" alt="A cute picture of me"></td>
 <td><a id="logo" class="navbar_item">Ferit Yiğit BALABAN</a></td>
 </tr>
 <tr>
@@ -38,10 +38,10 @@ function loadHeader() {
 </tr>
 </table>
 <ul class="navbar_list float_right">
-    <li><a class="navbar_item" href="index.html">Ana sayfa</a></li>
-    <li><a class="navbar_item" href="projects.html">Projelerim</a></li>
-    <li><a class="navbar_item" href="resume.html">Online Resume</a></li>
-    <li><a class="navbar_item" href="blog.html">Blog</a></li>
+    <li><a class="navbar_item" href="../index.html">Ana sayfa</a></li>
+    <li><a class="navbar_item" href="../projects.html">Projelerim</a></li>
+    <li><a class="navbar_item" href="../resume.html">Online Resume</a></li>
+    <li><a class="navbar_item" href="../blog.html">Blog</a></li>
 </ul>`;
     }
 }
