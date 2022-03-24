@@ -1,3 +1,6 @@
+/*
+ *          Ferit Yiğit BALABAN <fyb@duck.com>, 2022
+ */
 window.onload = function orchestrator() {
     loadHeader();
     loadFooter();
@@ -38,10 +41,10 @@ function loadHeader() {
 </tr>
 </table>
 <ul class="navbar_list float_right">
-    <li><a class="navbar_item" href="index.html">Ana sayfa</a></li>
-    <li><a class="navbar_item" href="projects.html">Projelerim</a></li>
-    <li><a class="navbar_item" href="resume.html">Online Resume</a></li>
-    <li><a class="navbar_item" href="blog.html">Blog</a></li>
+    <li><a class="navbar_item" href="../index.html">Ana sayfa</a></li>
+    <li><a class="navbar_item" href="../projects.html">Projelerim</a></li>
+    <li><a class="navbar_item" href="../resume.html">Online Resume</a></li>
+    <li><a class="navbar_item" href="../blog.html">Blog</a></li>
 </ul>`;
     }
 }
