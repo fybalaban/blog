@@ -1,9 +1,12 @@
-const pageLink = window.location.href;
-const inSubfolder = pageLink.includes("projects") || pageLink.includes("posts")
+window.onload = function orchestrator() {
+    loadHeader();
+    loadFooter();
+}
 
-window.onload = function loadHeader() {
+function loadHeader() {
+    const pageLink = window.location.href;
+    let inSubfolder = pageLink.includes("projects") || pageLink.includes("posts");
     if (inSubfolder) {
-        document.getElementById("header").innerHTML = "";
         document.getElementById("header").innerHTML = `
 <!-- This header is suitable for pages in subfolders -->
 <table class="float_left">
@@ -23,7 +26,6 @@ window.onload = function loadHeader() {
 </ul>`;
     }
     else {
-        document.getElementById("header").innerHTML = "";
         document.getElementById("header").innerHTML = `
 <!-- This header is suitable for pages on root -->
 <table class="float_left">
@@ -44,7 +46,7 @@ window.onload = function loadHeader() {
     }
 }
 
-window.onload = function loadFooter() {
+function loadFooter() {
     document.getElementById("footer").innerHTML = "";
     document.getElementById("footer").innerHTML = `
 <h2>2022 🄯 Ferit Yiğit BALABAN</h2>
