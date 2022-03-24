@@ -5,8 +5,8 @@ window.onload = function orchestrator() {
 
 function loadHeader() {
     const pageLink = window.location.href;
-    let inSubfolder = pageLink.includes("projects") || pageLink.includes("posts");
-    if (inSubfolder) {
+    let pageInDirectory = pageLink.includes("projects") || pageLink.includes("posts");
+    if (pageInDirectory) {
         document.getElementById("header").innerHTML = `
 <!-- This header is suitable for pages in subfolders -->
 <table class="float_left">
