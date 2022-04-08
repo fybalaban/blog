@@ -1,0 +1,26 @@
+#title {
+    display: grid;
+    margin: 0;
+    padding: 24px 0 0 0;
+}
+
+#title > h1 {
+    grid-row-start: 1;
+    grid-column-start: 1;
+    margin: 0;
+}
+
+#title > h4 {
+    grid-row-start: 1;
+    grid-column-start: 2;
+    justify-self: end;
+    align-self: end;
+    margin: 0;
+}
+
+#title > hr{
+    grid-row-start: 2;
+    grid-column-start: span 2;
+    margin: 0;
+    color: #2F4F4F;
+}
