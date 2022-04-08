@@ -8,7 +8,7 @@ window.onload = function orchestrator() {
 
 function loadHeader() {
     const pageLink = window.location.href;
-    let pageInDirectory = pageLink.includes("projects") || pageLink.includes("posts");
+    let pageInDirectory = pageLink.includes("projects") || pageLink.includes("posts") || pageLink.includes("project");
     if (pageInDirectory) {
         document.getElementById("header").innerHTML = `
 <!-- This header is suitable for pages in subfolders -->
