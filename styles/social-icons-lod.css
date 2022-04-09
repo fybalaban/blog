@@ -1,0 +1,33 @@
+.social_button {
+    border: none;
+}
+
+.linkedin {
+    background-image: url("../images/social-icons/light-on-dark/linkedin.svg");
+    width: 50px;
+    height: 50px;
+}
+
+.github {
+    background-image: url("../images/social-icons/light-on-dark/github.svg");
+    width: 50px;
+    height: 50px;
+}
+
+.instagram {
+    background-image: url("../images/social-icons/light-on-dark/instagram.svg");
+    width: 50px;
+    height: 50px;
+}
+
+.mail {
+    background-image: url("../images/social-icons/light-on-dark/mail.svg");
+    width: 50px;
+    height: 50px;
+}
+
+.twitter {
+    background-image: url("../images/social-icons/light-on-dark/twitter.svg");
+    width: 50px;
+    height: 50px;
+}
