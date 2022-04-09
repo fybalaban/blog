@@ -161,6 +161,18 @@ html, body{
     padding: 0;
 }
 
+#footer > a{
+    display: inline-flex;
+}
+
+#footer > a > img{
+    height: 30px;
+}
+
+#footer > img{
+    height: 30px;
+}
+
 #footer > hr{
     border: none;
     border-top: 1px solid;
