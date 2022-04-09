@@ -143,8 +143,14 @@ html, body{
     grid-column: 2;
     padding: 0 24px 24px 24px;
     font-family: 'JetBrains Mono', monospace;
+    overflow-wrap: break-word;
 
     background: cornsilk;
+}
+
+#content > img {
+    max-height: 100%;
+    max-width: 100%;
 }
 
 #footer{
@@ -201,4 +207,9 @@ html, body{
 
 #right_column{
     grid-column: 3;
+}
+
+.icons8{
+    color: #1fb141;
+    text-decoration: none;
 }
