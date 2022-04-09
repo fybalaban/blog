@@ -2,6 +2,9 @@
  *          Ferit Yiğit BALABAN <fyb@duck.com>, 2022
  */
 window.onload = function orchestrator() {
+    if (window.location.href.includes("index.html")) {
+        titleBar();
+    }
     loadHeader();
     loadFooter();
 }
@@ -58,4 +61,19 @@ function loadFooter() {
 <h2>2022 🄯 Ferit Yiğit BALABAN</h2>
 <hr>
 <h4 class="monospaced">Created with <3 on <a href="https://www.jetbrains.com/webstorm/">JetBrains WebStorm</a> | Hosted with <3 on <a href="https://github.com/fybx/blog">GitHub</a></h4>`;
+}
+
+async function titleBar() {
+    let hello = [ "Merhaba!", "Hello!", "Bonjour!", "您好!", "اسلا عليكم!", "Привет!", "こんにちは!" ];
+    let iterator = 0;
+    while (iterator < hello.length) {
+        document.title = hello[iterator];
+        await sleep(2000);
+        if (iterator !== hello.length - 1) {
+            iterator++;
+        }
+        else {
+            iterator = 0;
+        }
+    }
 }
