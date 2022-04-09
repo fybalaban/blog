@@ -1,4 +1,7 @@
-@import url('https://fonts.googleapis.com/css2?family=Inconsolata&display=swap');
+@font-face {
+    font-family: "JetBrains Mono";
+    src: url("../fonts/JetBrainsMono-Regular.woff2") format("woff");
+}
 
 :root{
     --content_background: cornsilk;
@@ -66,7 +69,7 @@ html, body{
 }
 
 .monospaced{
-    font-family: 'Inconsolata', monospace;
+    font-family: 'JetBrains Mono', monospace;
 }
 
 #left_column{
@@ -136,6 +139,7 @@ html, body{
     grid-area: content;
     grid-column: 2;
     padding: 0 24px 24px 24px;
+    font-family: 'JetBrains Mono', monospace;
 
     background: cornsilk;
 }
