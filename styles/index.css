@@ -17,20 +17,11 @@
 
 #contact {
     display: flex;
+    flex-wrap: wrap;
     justify-content: space-between;
     align-items: center;
 }
 
-#contact > #buttons > a {
-    margin: 0 20px 0 0;
-}
-
 #contact > #buttons > a:hover {
     background-color: mintcream;
-}
-
-@media(max-width: 745px) {
-    #contact > #buttons > a {
-        margin: 0 10px 0 0;
-    }
 }
