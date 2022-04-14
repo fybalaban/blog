@@ -49,7 +49,7 @@
     color: var(--header_foreground_secondary);
 }
 
-.navigation:last-child {
+a:last-child {
     margin: 0;
 }
 
