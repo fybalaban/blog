@@ -1,0 +1,58 @@
+#header {
+    grid-column-start: 2;
+    grid-row-start: 1;
+
+    margin: 0;
+    padding: 0;
+    background-color: var(--header_background);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.static {
+    display: inline-flex;
+    align-items: center;
+}
+
+.profile_picture {
+    margin: 10px;
+    width: 60px;
+    height: 60px;
+    border: 1px solid whitesmoke;
+    border-radius: 50%;
+}
+
+.title {
+    margin: 0 10px 0 0;
+}
+
+.title > h1, h2 {
+    margin: 0;
+    font: bold 24px Tahoma, Helvetica, Verdana, sans-serif;
+    color: var(--header_foreground_primary);
+}
+
+.title > h2{
+    font-size: 12px;
+    font-weight: lighter;
+}
+
+.navigation {
+    margin: 0 10px 0 0;
+}
+
+.navigation > a {
+    margin: 0 10px 0 0;
+    text-decoration: none;
+    font: 18px Tahoma, Helvetica, Verdana, sans-serif;
+    color: var(--header_foreground_secondary);
+}
+
+.navigation:last-child {
+    margin: 0;
+}
+
+.navigation > a:hover {
+    color: var(--header_navbar_hover);
+}
