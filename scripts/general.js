@@ -19,41 +19,37 @@ function loadHeader() {
         console.log("Using header for subfolder content");
         document.getElementById("header").innerHTML = `
 <!-- This header is suitable for pages in subfolders -->
-<table class="float_left">
-  <tr>
-    <td rowspan="2"><img id="logo_photo" src="../images/photo.png" alt="A cute picture of me"></td>
-    <td><a id="logo" class="navbar_item">Ferit Yiğit BALABAN</a></td>
-  </tr>
-  <tr>
-    <td><h5 id="logo_bottom">Bilgisayar Mühendisliği öğrencisi</h5></td>
-  </tr>
-</table>
-<ul class="navbar_list float_right">
-  <li><a class="navbar_item" href="../index.html">Ana sayfa</a></li>
-  <li><a class="navbar_item" href="../projects.html">Projelerim</a></li>
-  <li><a class="navbar_item" href="../resume.html">Online Resume</a></li>
-  <li><a class="navbar_item" href="../blog.html">Blog</a></li>
-</ul>`;
+<div class="static">
+    <img class="profile_picture" src="../images/photo.png" alt="A cute picture of me!">
+    <div class="title">
+        <h1>Ferit Yiğit BALABAN</h1>
+        <h2>Bilgisayar Mühendisliği öğrencisi</h2>
+    </div>
+</div>
+<nav class="navigation">
+    <a href="../index.html">Ana sayfa</a>
+    <a href="../projects.html">Projelerim</a>
+    <a href="../resume.html">Online Resume</a>
+    <a href="../blog.html">Blog</a>
+</nav>`;
     }
     else {
         console.log("Using header for root level content");
         document.getElementById("header").innerHTML = `
 <!-- This header is suitable for pages on root -->
-<table class="float_left">
-    <tr>
-    <td rowspan="2"><img id="logo_photo" src="images/photo.png" alt="A cute picture of me"></td>
-<td><a id="logo" class="navbar_item">Ferit Yiğit BALABAN</a></td>
-</tr>
-<tr>
-    <td><h5 id="logo_bottom">Bilgisayar Mühendisliği öğrencisi</h5></td>
-</tr>
-</table>
-<ul class="navbar_list float_right">
-    <li><a class="navbar_item" href="index.html">Ana sayfa</a></li>
-    <li><a class="navbar_item" href="projects.html">Projelerim</a></li>
-    <li><a class="navbar_item" href="resume.html">Online Resume</a></li>
-    <li><a class="navbar_item" href="blog.html">Blog</a></li>
-</ul>`;
+<div class="static">
+    <img class="profile_picture" src="images/photo.png" alt="A cute picture of me!">
+    <div class="title">
+        <h1>Ferit Yiğit BALABAN</h1>
+        <h2>Bilgisayar Mühendisliği öğrencisi</h2>
+    </div>
+</div>
+<nav class="navigation">
+    <a href="index.html">Ana sayfa</a>
+    <a href="projects.html">Projelerim</a>
+    <a href="resume.html">Online Resume</a>
+    <a href="blog.html">Blog</a>
+</nav>`;
     }
 }
 

@@ -27,7 +27,7 @@
     margin: 0 10px 0 0;
 }
 
-.title > h1, h2 {
+.title > h1, .title > h2 {
     margin: 0;
     font: bold 24px Tahoma, Helvetica, Verdana, sans-serif;
     color: var(--header_foreground_primary);
