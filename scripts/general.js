@@ -66,8 +66,6 @@ function loadFooter() {
     <img src="https://mirrors.creativecommons.org/presskit/icons/sa.svg" alt="ShareAlike">
 </a>
 <a href="https://yesterweb.org/no-to-web3/"><img src="https://yesterweb.org/no-to-web3/img/roly-saynotoweb3.gif" alt="Say No to Web3!"></a>
-<img src="../images/miku.gif" alt="This website is Miku-approved!">
-<img src="../images/nft.gif" alt="NFT? No Frickin' Thanks!">
 <a href="../privacy.html" title="Gizliliğiniz hakkında"><img src="../images/nocookie.gif" alt="This website does not use cookies."></a>
 <hr>
 <h4 class="monospaced">Created with <3 on <a href="https://www.jetbrains.com/webstorm/">JetBrains WebStorm</a> | Hosted with <3 on <a href="https://github.com/fybx/blog">GitHub</a></h4>`;
@@ -83,8 +81,6 @@ function loadFooter() {
     <img src="https://mirrors.creativecommons.org/presskit/icons/sa.svg" alt="ShareAlike">
 </a>
 <a href="https://yesterweb.org/no-to-web3/"><img src="https://yesterweb.org/no-to-web3/img/roly-saynotoweb3.gif" alt="Say No to Web3!"></a>
-<img src="images/miku.gif" alt="This website is Miku-approved!">
-<img src="images/nft.gif" alt="NFT? No Frickin' Thanks!">
 <a href="privacy.html" title="Gizliliğiniz hakkında"><img src="images/nocookie.gif" alt="This website does not use cookies."></a>
 <hr>
 <h4 class="monospaced">Created with <3 on <a href="https://www.jetbrains.com/webstorm/">JetBrains WebStorm</a> | Hosted with <3 on <a href="https://github.com/fybx/blog">GitHub</a></h4>`;
