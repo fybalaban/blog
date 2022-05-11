@@ -75,7 +75,7 @@ async function type(texts, useTimestamp, startingPoint) {
 
 async function ask(question) {
     let aName = 'a' + createdElements;
-    document.getElementById("content").innerHTML += `<a href="https://balaban.software/" id="${aName}"></a>`
+    document.getElementById("content").innerHTML += `<a href="../index.html" id="${aName}"></a>`
     createdElements++;
 
     let iterator = 0;
