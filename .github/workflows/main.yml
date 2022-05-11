@@ -28,4 +28,6 @@ jobs:
           user: ${{ secrets.FTP_USER }}
           password: ${{ secrets.FTP_PASS }}
           remote_dir: "/home/fybxdev/public_html"
+          ftp_ssl_allow: "true"
+          ftp_use_feat: "true"
           delete: "true"
