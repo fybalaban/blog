@@ -27,5 +27,5 @@ jobs:
           server: ${{ secrets.FTP_SERV }}
           user: ${{ secrets.FTP_USER }}
           password: ${{ secrets.FTP_PASS }}
-          local_dir: "./public_html"
+          local_dir: "/home/fybxdev/public_html"
           delete: "true"
