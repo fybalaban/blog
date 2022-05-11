@@ -5,13 +5,17 @@ let createdElements = 0;
 let blinking_cursor = false;
 const speed = 10; /* Duration between each printed character */
 const banner =
-    ' .o8                 oooo             .o8                                                    \n' +
-    '"888                 `888            "888                                                    \n' +
-    ' 888oooo.   .oooo.    888   .oooo.    888oooo.   .oooo.   ooo. .oo.        .ooooo.   .oooo.o \n' +
-    ' d88\' `88b `P  )88b   888  `P  )88b   d88\' `88b `P  )88b  `888P"Y88b      d88\' `88b d88(  "8 \n' +
-    ' 888   888  .oP"888   888   .oP"888   888   888  .oP"888   888   888      888   888 `"Y88b.  \n' +
-    ' 888   888 d8(  888   888  d8(  888   888   888 d8(  888   888   888  .o. 888   888 o.  )88b \n' +
-    ' `Y8bod8P\' `Y888""8o o888o `Y888""8o  `Y8bod8P\' `Y888""8o o888o o888o Y8P `Y8bod8P\' 8""888P\' '
+    "    ,...         ,,                           ,,                    \n" +
+    "  .d' \"\"        *MM                         `7MM                    \n" +
+    "  dM`            MM                           MM                    \n" +
+    " mMMmm`7M'   `MF'MM,dMMb.`7M'   `MF'     ,M\"\"bMM  .gP\"Ya `7M'   `MF'\n" +
+    "  MM    VA   ,V  MM    `Mb `VA ,V'     ,AP    MM ,M'   Yb  VA   ,V  \n" +
+    "  MM     VA ,V   MM     M8   XMX       8MI    MM 8M\"\"\"\"\"\"   VA ,V   \n" +
+    "  MM      VVV    MM.   ,M9 ,V' VA.  ,, `Mb    MM YM.    ,    VVV    \n" +
+    ".JMML.    ,V     P^YbmdP'.AM.   .MA.db  `Wbmd\"MML.`Mbmmd'     W     \n" +
+    "         ,V                                                         \n" +
+    "      OOb\"                                                          "
+/* Banner created at https://textkool.com/en/ascii-art-generator using font Georgia11 */
 
 window.onload = async function orchestrate() {
     let texts = [
@@ -75,7 +79,7 @@ async function type(texts, useTimestamp, startingPoint) {
 
 async function ask(question) {
     let aName = 'a' + createdElements;
-    document.getElementById("content").innerHTML += `<a href="../index.html" id="${aName}"></a>`
+    document.getElementById("content").innerHTML += `<a href="index.html" id="${aName}"></a>`
     createdElements++;
 
     let iterator = 0;
