@@ -68,7 +68,7 @@ function loadFooter() {
 <a href="https://yesterweb.org/no-to-web3/"><img src="https://yesterweb.org/no-to-web3/img/roly-saynotoweb3.gif" alt="Say No to Web3!"></a>
 <a href="../privacy.html" title="Gizliliğiniz hakkında"><img src="../images/nocookie.gif" alt="This website does not use cookies."></a>
 <hr>
-<h4 class="monospaced">Created with <3 on <a href="https://www.jetbrains.com/webstorm/">JetBrains WebStorm</a> | Hosted with <3 on <a href="https://github.com/fybx/blog">GitHub</a></h4>`;
+<h4 class="monospaced">Created with <3 on <a href="https://www.jetbrains.com/webstorm/">JetBrains WebStorm</a></h4>`;
     }
     else {
         document.getElementById("footer").innerHTML = `
@@ -83,7 +83,7 @@ function loadFooter() {
 <a href="https://yesterweb.org/no-to-web3/"><img src="https://yesterweb.org/no-to-web3/img/roly-saynotoweb3.gif" alt="Say No to Web3!"></a>
 <a href="privacy.html" title="Gizliliğiniz hakkında"><img src="images/nocookie.gif" alt="This website does not use cookies."></a>
 <hr>
-<h4 class="monospaced">Created with <3 on <a href="https://www.jetbrains.com/webstorm/">JetBrains WebStorm</a> | Hosted with <3 on <a href="https://github.com/fybx/blog">GitHub</a></h4>`;
+<h4 class="monospaced">Created with <3 on <a href="https://www.jetbrains.com/webstorm/">JetBrains WebStorm</a></h4>`;
     }
 }
 
