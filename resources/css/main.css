@@ -70,18 +70,21 @@ html, body {
   color: white;
 }
 #landing nav a {
-  display: inline-block;
+  margin: 0 -0.25rem;
+  padding: 0 0.25rem;
   text-decoration: none;
   font: 500 4vmin "JetBrains Mono", monospace;
-  color: inherit;
-  margin: 1vmin 0 0 0;
-  box-shadow: inset 0 0 0 #caa8ff;
-  transition: 300ms ease-in color, 300ms ease-in box-shadow;
-  will-change: transform;
+  box-shadow: inset 0 0 0 0 #caa8ff;
+  color: white;
+  transition: color 300ms ease-in-out, box-shadow 500ms ease-in-out;
 }
 #landing nav a:hover {
-  box-shadow: inset 300px 0 0 #caa8ff;
+  box-shadow: inset 300px 0 0 0 #caa8ff;
   color: black;
+}
+#landing nav a:active {
+  font-style: italic;
+  box-shadow: inset 1px 300px 0 0 #caa8ff;
 }
 @media screen and (max-width: 640px) {
   #landing {
