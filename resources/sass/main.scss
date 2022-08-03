@@ -1,0 +1,47 @@
+@use "colors";
+@use "overflows";
+@use "urls";
+@use "sass:color";
+
+@use "views/index";
+
+@font-face {
+  font-family: "JetBrains Mono";
+  src: url("../fonts/JetBrainsMono-Regular.woff2");
+}
+
+html, body {
+  margin: 0;
+  padding: 0;
+  //noinspection CssBrowserCompatibilityForProperties
+  scroll-behavior: smooth;
+}
+
+$switch-lang-size: 2em;
+
+#switch-lang {
+  position: absolute;
+  top: 48px;
+  right: 48px;
+  width: $switch-lang-size;
+  height: $switch-lang-size;
+  line-height: $switch-lang-size;
+  border: solid 1px white;
+  border-radius: 16px;
+  font-family: "JetBrains Mono", monospace;
+  font-size: 2vmin;
+  color: white;
+  text-align: center;
+  text-decoration: none;
+
+  &:hover {
+    background-color: colors.$cl_main_bright;
+    border-color: colors.$cl_main_bright;
+    box-shadow: color.scale(colors.$cl_main_bright, $alpha: -34%) 0 0 20px 5px;
+    color: black;
+  }
+
+  &:active {
+    transform: scale(1.125);
+  }
+}
