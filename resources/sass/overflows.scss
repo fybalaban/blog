@@ -1,0 +1,5 @@
+@mixin mx_mobile {
+  @media screen and (max-width: 640px) {
+    @content;
+  }
+}
