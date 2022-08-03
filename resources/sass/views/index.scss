@@ -4,15 +4,19 @@
 @use "../urls";
 @use "sass:color";
 
+html {
+  overflow-x: hidden;
+}
+
 #landing {
-  overflow: hidden;
+  overflow-x: hidden;
+  position: relative;
 
   main {
     display: flex;
     justify-content: space-between;
-    max-width: 100%;
-    width: 100vw;
-    height: 100vh;
+    min-width: 100vw;
+    min-height: 100vh;
     background: colors.$cl_index_bg urls.$background_image;
 
     #left {
@@ -59,7 +63,7 @@
         display: inline-flex;
         //noinspection CssBrowserCompatibilityForProperties
         flex-direction: row;
-        margin: 4vmin 0 0 5vmin;
+        margin: 4vmin 0 4vmin 5vmin;
 
         .social-button {
           border-radius: 16px;
@@ -144,7 +148,7 @@
       //noinspection CssBrowserCompatibilityForProperties
       flex-direction: column;
       align-items: flex-end;
-      margin: 0 48px 48px 0;
+      margin: 5vmin;
 
       animation: 1000ms slide-fade-in-right 0ms ease-out 1;
       color: white;
@@ -178,21 +182,29 @@
         animation: 1000ms ease-out 0ms 1 slide-in-up;
 
         h1 {
-          font-size: 48px;
+          font-size: 30px;
         }
 
         h2 {
-          font-size: 38px;
+          font-size: 22px;
         }
 
         p {
-          font-size: 24px;
+          font-size: 18px;
+        }
+
+        #social-nav {
+          .social-button {
+            width: 8vmin;
+            height: 8vmin;
+            padding: 2vmin;
+          }
         }
       }
 
       #site-nav {
         a {
-          font-size: 38px;
+          font-size: 22px;
         }
       }
     }
