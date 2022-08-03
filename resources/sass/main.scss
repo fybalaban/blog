@@ -33,15 +33,14 @@ $switch-lang-size: 2em;
   color: white;
   text-align: center;
   text-decoration: none;
+  animation: 1000ms ease-in-out fade-in;
+  transition: all ease-in-out 250ms;
 
   &:hover {
     background-color: colors.$cl_main_bright;
     border-color: colors.$cl_main_bright;
     box-shadow: color.scale(colors.$cl_main_bright, $alpha: -34%) 0 0 20px 5px;
     color: black;
-  }
-
-  &:active {
     transform: scale(1.125);
   }
 }
