@@ -1,0 +1,9 @@
+@font-face {
+  font-family: "JetBrains Mono";
+  src: url("../fonts/JetBrainsMono-Regular.woff2");
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Lexend:wght@800&family=Syne:wght@500&display=swap');
+
+$font-stack: "Syne", sans-serif;
+$font-stack-mono: "JetBrains Mono", monospace;
