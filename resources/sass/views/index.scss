@@ -2,6 +2,7 @@
 @use "../keyframes";
 @use "../overflows";
 @use "../urls";
+@use "../fonts";
 @use "sass:color";
 
 html {
@@ -29,17 +30,17 @@ html {
       animation: 1000ms ease-out 0ms 1 slide-in-left;
 
       h1 {
-        font: 800 5vmin "JetBrains Mono", monospace;
+        font: 800 5vmin "Lexend", fonts.$font-stack;
         margin: 5vmin;
       }
 
       h2 {
-        font: 600 4vmin "JetBrains Mono", monospace;
+        font: 600 4vmin fonts.$font-stack;
         margin: 0 4vmin 4vmin 5vmin;
       }
 
       p {
-        font: 500 2vmin "JetBrains Mono", monospace;
+        font: 500 2vmin fonts.$font-stack;
         margin: 0 3vmin 3vmin 5vmin;
       }
 
@@ -157,7 +158,7 @@ html {
         margin: 0 -.25rem;
         padding: 0 .25rem;
         text-decoration: none;
-        font: 500 4vmin "JetBrains Mono", monospace;
+        font: 500 4vmin fonts.$font-stack;
         // Do not change 0.09 of blur - this fixes the flickering issue on hover
         box-shadow: inset 0 0 0.01px 0 colors.$cl_main_bright;
         color: white;
