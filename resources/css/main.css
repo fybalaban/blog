@@ -1,8 +1,13 @@
+@import url("https://fonts.googleapis.com/css2?family=Lexend:wght@800&family=Syne:wght@500&display=swap");
 /*  mx_index_site-nav_vertical
  *  If width < 640px index.html switches to mobile layout. This is triggered by mx_mobile.
  *  If height < 640px in mobile layout, elemenet #site-nav should decrease font-size to not overlap with
  *  element #left.
  */
+@font-face {
+  font-family: "JetBrains Mono";
+  src: url("../fonts/JetBrainsMono-Regular.woff2");
+}
 @keyframes slide-in-left {
   0% {
     transform: translateX(-100%);
@@ -53,15 +58,15 @@
   animation: 1000ms ease-out 0ms 1 slide-in-left;
 }
 #landing main #left h1 {
-  font: 800 5vmin "JetBrains Mono", monospace;
+  font: 800 5vmin "Lexend", "Syne", sans-serif;
   margin: 5vmin;
 }
 #landing main #left h2 {
-  font: 600 4vmin "JetBrains Mono", monospace;
+  font: 600 4vmin "Syne", sans-serif;
   margin: 0 4vmin 4vmin 5vmin;
 }
 #landing main #left p {
-  font: 500 2vmin "JetBrains Mono", monospace;
+  font: 500 2vmin "Syne", sans-serif;
   margin: 0 3vmin 3vmin 5vmin;
 }
 #landing main #left a {
@@ -153,7 +158,7 @@
   margin: 0 -0.25rem;
   padding: 0 0.25rem;
   text-decoration: none;
-  font: 500 4vmin "JetBrains Mono", monospace;
+  font: 500 4vmin "Syne", sans-serif;
   box-shadow: inset 0 0 0.01px 0 #caa8ff;
   color: white;
   transition: color 300ms ease-in-out, box-shadow 300ms ease-in-out;
@@ -198,10 +203,6 @@
   }
 }
 
-@font-face {
-  font-family: "JetBrains Mono";
-  src: url("../fonts/JetBrainsMono-Regular.woff2");
-}
 html, body {
   margin: 0;
   padding: 0;
@@ -249,7 +250,7 @@ a {
   line-height: 2em;
   border: solid 1px white;
   border-radius: 16px;
-  font-family: "JetBrains Mono", monospace;
+  font-family: "Syne", sans-serif;
   font-size: 2vmin;
   color: white;
   text-align: center;
