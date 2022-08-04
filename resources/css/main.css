@@ -154,7 +154,7 @@
   padding: 0 0.25rem;
   text-decoration: none;
   font: 500 4vmin "JetBrains Mono", monospace;
-  box-shadow: inset 0 0 0 0.09px #caa8ff;
+  box-shadow: inset 0 0 0.01px 0 #caa8ff;
   color: white;
   transition: color 300ms ease-in-out, box-shadow 300ms ease-in-out;
 }
