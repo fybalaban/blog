@@ -15,6 +15,24 @@ html, body {
   scroll-behavior: smooth;
 }
 
+html {
+  //noinspection CssInvalidPropertyValue
+  height: -webkit-fill-available;
+  //noinspection CssInvalidPropertyValue
+  height: -moz-available;
+  //noinspection CssInvalidPropertyValue
+  height: fill-available;
+}
+
+body {
+  //noinspection CssInvalidPropertyValue
+  min-height: -webkit-fill-available;
+  //noinspection CssInvalidPropertyValue
+  min-height: -moz-available;
+  //noinspection CssInvalidPropertyValue
+  min-height: fill-available;
+}
+
 a {
   -webkit-tap-highlight-color: transparent;
   -webkit-touch-callout: none;
@@ -29,31 +47,94 @@ a {
 .normal {
   background: colors.$cl_index_bg urls.$background_image;
 
-  header {
+  #sidebar {
+    position: fixed;
+    top: 0;
+    left: 0;
     display: flex;
-    padding: 2vw 2vh;
-    color: white;
+    //noinspection CssBrowserCompatibilityForProperties
+    flex-direction: column;
+    justify-content: space-between;
+    text-align: center;
+    background: black;
+    height: 100%;
+    // WARNING: This width must be equal to left margin of element #content
+    width: 48px;
 
-    img {
-      width: 48px;
-      border-radius: 50%;
+    #sidebar-logo {
+      margin: 32px 4px 0 4px;
+      border-radius: 16px;
     }
 
-    section {
-      display: inline-flex;
-      //noinspection CssBrowserCompatibilityForProperties
-      flex-direction: column;
-    }
+    #sidebar-nav {
+      .sidebar-navitem {
+        margin: 0 0 4px 0;
+        display: inline-block;
+        box-sizing: border-box;
+        text-decoration: none;
+        width: 100%;
 
-    nav {
-      
-    }
+        border-right: 1px solid;
+        font-size: 24px;
 
-    @include overflows.mx_mobile {
-      nav {
-        display: none;
+        &:nth-of-type(1) {
+          border-right-color: colors.$cl_rainbow1;
+        }
+
+        &:nth-of-type(2) {
+          border-right-color: colors.$cl_rainbow2;
+        }
+
+        &:nth-of-type(3) {
+          border-right-color: colors.$cl_rainbow3;
+        }
+
+        &:nth-of-type(4) {
+          border-right-color: colors.$cl_rainbow4;
+        }
+
+        &:nth-of-type(5) {
+          border-right-color: colors.$cl_rainbow5;
+        }
       }
     }
+
+    #sidebar-switch-lang {
+      //noinspection CssBrowserCompatibilityForProperties
+      place-self: center;
+      margin: 0 4px 32px 4px;
+      display: inline-block;
+      border: 1px solid white;
+      border-radius: 16px;
+      text-align: center;
+      width: 2em;
+      height: 2em;
+      line-height: 2em;
+
+      color: white;
+      text-decoration: none;
+      font-family: fonts.$font-stack;
+      font-weight: 600;
+      font-size: 16px;
+      transition: all ease-in-out 250ms;
+
+      &:hover {
+        background-color: colors.$cl_main_bright;
+        border-color: colors.$cl_main_bright;
+        box-shadow: color.scale(colors.$cl_main_bright, $alpha: -34%) 0 0 20px 5px;
+        color: black;
+        transform: scale(1.125);
+      }
+    }
+  }
+
+  #content {
+    background: #444;
+    margin: 0 0 0 48px;
+    padding: 10px;
+    color: #ccc;
+    box-sizing: border-box;
+    min-height: 100%;
   }
 }
 
