@@ -5,17 +5,14 @@
 @use "sass:color";
 
 html {
-  overflow-x: hidden;
+
 }
 
 #landing {
-  overflow-x: hidden;
-  position: relative;
+
 
   main {
-    display: flex;
-    justify-content: space-between;
-    min-width: 100vw;
+    max-width: 100%;
     min-height: 100vh;
     background: colors.$cl_index_bg urls.$background_image;
 
@@ -24,7 +21,9 @@ html {
       //noinspection CssBrowserCompatibilityForProperties
       flex-direction: column;
       justify-content: center;
+      height: 100vh;
       width: 50%;
+
       background: #111111dd;
       color: white;
       animation: 1000ms ease-out 0ms 1 slide-in-left;
@@ -142,13 +141,14 @@ html {
     }
 
     #site-nav {
+      position: fixed;
+      bottom: 5vmin;
+      right: 5vmin;
+
       display: flex;
-      //noinspection CssBrowserCompatibilityForProperties
-      place-self: flex-end;
       //noinspection CssBrowserCompatibilityForProperties
       flex-direction: column;
       align-items: flex-end;
-      margin: 5vmin;
 
       animation: 1000ms slide-fade-in-right 0ms ease-out 1;
       color: white;
@@ -158,7 +158,8 @@ html {
         padding: 0 .25rem;
         text-decoration: none;
         font: 500 4vmin "JetBrains Mono", monospace;
-        box-shadow: inset 0 0 0 0 colors.$cl_main_bright;
+        // Do not change 0.09 of spread - this fixes the flickering issue on hover
+        box-shadow: inset 0 0 0 0.09px colors.$cl_main_bright;
         color: white;
         transition: color 300ms ease-in-out, box-shadow 300ms ease-in-out;
 
@@ -179,6 +180,7 @@ html {
 
       #left {
         width: 100%;
+        height: 50%;
         animation: 1000ms ease-out 0ms 1 slide-in-up;
 
         h1 {
@@ -202,6 +204,14 @@ html {
         }
       }
 
+      #site-nav {
+        a {
+          font-size: 25px;
+        }
+      }
+    }
+
+    @include overflows.mx_index_site-nav_vertical {
       #site-nav {
         a {
           font-size: 22px;
