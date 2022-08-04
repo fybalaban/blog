@@ -7,4 +7,4 @@ function setSidebarHeight() {
 }
 
 window.addEventListener("load", setSidebarHeight);
-window.addEventListener("resize", setSidebarHeight);
+window.addEventListener("scroll", setSidebarHeight);
