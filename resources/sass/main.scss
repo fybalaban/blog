@@ -1,14 +1,10 @@
 @use "colors";
 @use "overflows";
 @use "urls";
+@use "fonts";
 @use "sass:color";
 
 @use "views/index";
-
-@font-face {
-  font-family: "JetBrains Mono";
-  src: url("../fonts/JetBrainsMono-Regular.woff2");
-}
 
 $switch-lang-size: 2em;
 
@@ -70,7 +66,7 @@ a {
   line-height: $switch-lang-size;
   border: solid 1px white;
   border-radius: 16px;
-  font-family: "JetBrains Mono", monospace;
+  font-family: fonts.$font-stack;
   font-size: 2vmin;
   color: white;
   text-align: center;
