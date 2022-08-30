@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Dual boot sistemlerde Bluetooth bağlantısı | fybx</title>
+    <link type="text/css" rel="stylesheet" href="../styles/posts.css">
+    <link type="text/css" rel="stylesheet" href="../styles/header.css">
+    <link type="text/css" rel="stylesheet" href="../styles/general.css">
+    <script src="../scripts/general.js"></script>
+</head>
+<body>
+<div class="container">
+    <div id="left_column"></div> <!-- Left black box -->
+    <div id="header"></div>
+    <div id="content">
+        <div id="post-identifier">
+            <div id="post-identifier-upper">
+                <h1 id="post-title">Dual boot sistemlerde Bluetooth bağlantısı</h1>
+                <h3 id="post-author">fybalaban</h3>
+            </div>
+            <hr>
+            <h3 id="post-date">22/6/2022</h3>
+        </div>
+        <p>Merhaba sevgili okuyucu!</p>
+        <p>Bu yazımda, Windows ve <a href="../tribute.html">GNU/Linux</a> kurulu, dual boot edilen bir makineye aynı Bluetooth cihazının bağlı kalmasını sağlamayı ele alacağım.</p>
+        <p>Ben günlük olarak Arch Linux'ta vakit geçiriyor olsam da oyun oynamak veya Adobe ürünlerini kullanabilmek için Windows'u da makinemde yüklü tutuyorum. İşletim sistemleri arasında geçiş yaparken Bluetooth klavyeme olan bağlantıyı kaybetmemek için ne yapılacağını araştırırken önce <a href="https://wiki.archlinux.org/">Arch Wiki</a>'de <a href="https://wiki.archlinux.org/title/Bluetooth">şu sayfaya</a> denk geldim. Wiki'deki bu makalenin "See also" bölümünde <a href="https://averylarsen.com/">Avery</a>'nin websitesinden bir blog yazısı benim sorunumu tam olarak çözdü. İnternette bu çözümü anlatan Türkçe içerik olmadığından dilim döndüğünce adımları aktarmaya çalışacağım.</p>
+        <h2>1. Adım: Windows'ta cihazımızı eşleştiriyoruz</h2>
+        <p>Eğer Bluetooth cihazını Windows'ta çoktan eşleştirdiysen bu adımı atlayabilirsin.</p>
+        <h2>2. Adım: Cihaza ait Bluetooth anahtarlarını buluyoruz</h2>
+        <h4>2.1. Adım: PsTools'u indir</h4>
+        <p>Cihazımız Windows'ta eşleştirildiği sırada kullanılan anahtarları bulmak için "SYSTEM" hesabının yetkileri ile <a href="https://tr.wikipedia.org/wiki/Windows_Kay%C4%B1t_Defteri">kayıt defteri</a> programını açacağız. Bunu yapabilmek için Microsoft'tan <a href="https://docs.microsoft.com/en-us/sysinternals/downloads/psexec">PsTools</a> program paketini indirmemiz gerekecek. İndirdiğin zip dosyasının içeriğini bir klasöre çıkarttıktan sonra Yönetici Komut Satırı'nı kullanarak dosyaları çıkarttığın klasöre gir.</p>
+        <p class="code">&nbsp;C:\Users\ferit\Downloads> cd PsTools</p>
+        Klasöre girdikten sonra aşağıdaki komut ile "regedit.exe" programını "SYSTEM" hesabının yetkileri ile başlat.
+        <p class="code">&nbsp;C:\Users\ferit\Downloads\PsTools> psexec -s -i regedit.exe</p>
+        <h4>2.2. Adım: Anahtarların bulunduğu kaydı bul</h4>
+        <p>"<b>HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\BTHPORT\Parameters\Keys\</b>" klasörüne kadar gel. Bu noktada eşleştirdiğin her Bluetooth cihazı için bir tane klasör görüyor olmalısın. Anahtarlarını bulmak istediğin cihazın MAC adresiyle isimlendirilmiş olan kayıt defteri anahtarını dışa aktar.</p>
+    </div>
+    <div id="footer"></div>
+    <div id="right_column"></div> <!-- Right black box -->
+</div>
+</body>
+</html>

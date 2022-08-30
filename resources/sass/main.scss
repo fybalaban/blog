@@ -5,8 +5,12 @@
 @use "sass:color";
 
 @use "views/index";
+@use "views/about";
 
 $switch-lang-size: 2em;
+$sidebar-navitem-shadow: "20px 0 20px -10px";
+$sidebar-navitem-margin-b: 12px;
+$sidebar-nav-button-margin-lr: 4px;
 
 html, body {
   margin: 0;
@@ -47,6 +51,64 @@ a {
 .normal {
   background: colors.$cl_index_bg urls.$background_image;
 
+  #logo {
+    z-index: 98;
+    position: fixed;
+    top: 10px;
+    left: 10px;
+    color: white;
+    font: 600 24px fonts.$font-stack;
+    margin: 0;
+    transform: perspective(1px) translateZ(0);
+    transition: color ease-in-out 150ms;
+
+    &:hover {
+      color: colors.$cl_main_bright;
+      animation: buzz linear infinite 0.15s;
+    }
+  }
+
+  #toggle-label {
+    z-index: 98;
+    position: fixed;
+    top: 10px;
+    right: 10px;
+    color: white;
+    font: 600 24px fonts.$font-stack;
+    cursor: pointer;
+    transition: color ease-in-out 150ms;
+
+    &:hover {
+      color: colors.$cl_main_bright;
+    }
+  }
+
+  #toggle-input {
+    position: absolute;
+    -webkit-appearance: none;
+    //noinspection CssBrowserCompatibilityForProperties
+    appearance: none;
+    background-color: #fff;
+    margin: 0;
+  }
+
+  #toggle-input:checked + #sidebar {
+    width: 144px !important;
+  }
+
+  #shadow {
+    z-index: 97;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 60px;
+    background: -webkit-linear-gradient(to bottom, black, transparent);
+    background: -o-linear-gradient(to bottom, black, transparent);
+    background: -moz-linear-gradient(to bottom, black, transparent);
+    background: linear-gradient(to bottom, black, transparent);
+  }
+
   #sidebar {
     position: fixed;
     top: 0;
@@ -55,46 +117,116 @@ a {
     //noinspection CssBrowserCompatibilityForProperties
     flex-direction: column;
     justify-content: space-between;
-    text-align: center;
     background: black;
+    overflow: hidden;
     height: 100%;
     // WARNING: This width must be equal to left margin of element #content
     width: 48px;
+    transition: 250ms ease-out width;
+
+    &.toggle {
+      width: 48px;
+    }
 
     #sidebar-logo {
+      //noinspection CssBrowserCompatibilityForProperties
+      place-self: center;
       margin: 32px 4px 0 4px;
       border-radius: 16px;
     }
 
     #sidebar-nav {
       .sidebar-navitem {
-        margin: 0 0 4px 0;
+        z-index: 100;
+        margin: 0 0 $sidebar-navitem-margin-b 0;
         display: inline-block;
         box-sizing: border-box;
         text-decoration: none;
         width: 100%;
+        height: 24px;
+        color: white;
 
-        border-right: 1px solid;
-        font-size: 24px;
+        background-repeat: no-repeat;
+        background-position: center;
+
+        transition: 250ms ease-in-out box-shadow, 250ms ease-in transform;
+        border-right: 2px solid;
 
         &:nth-of-type(1) {
+          background-image: urls.$sidebar_home;
           border-right-color: colors.$cl_rainbow1;
+          &:hover {
+            box-shadow: colors.$cl_rainbow1 unquote($sidebar-navitem-shadow);
+            transform: scale(1.125);
+          }
         }
 
         &:nth-of-type(2) {
+          background-image: urls.$sidebar_about_me;
           border-right-color: colors.$cl_rainbow2;
+          &:hover {
+            box-shadow: colors.$cl_rainbow2 unquote($sidebar-navitem-shadow);
+            transform: scale(1.125);
+          }
         }
 
         &:nth-of-type(3) {
+          background-image: urls.$sidebar_projects;
           border-right-color: colors.$cl_rainbow3;
-        }
-
-        &:nth-of-type(4) {
-          border-right-color: colors.$cl_rainbow4;
+          &:hover {
+            box-shadow: colors.$cl_rainbow3 unquote($sidebar-navitem-shadow);
+            transform: scale(1.125);
+          }
         }
 
         &:nth-of-type(5) {
+          background-image: urls.$sidebar_blog;
+          border-right-color: colors.$cl_rainbow4;
+          &:hover {
+            box-shadow: colors.$cl_rainbow4 unquote($sidebar-navitem-shadow);
+            transform: scale(1.125);
+          }
+        }
+
+        &:nth-of-type(6) {
+          background-image: urls.$sidebar_resume;
           border-right-color: colors.$cl_rainbow5;
+
+          &:hover {
+            box-shadow: colors.$cl_rainbow5 unquote($sidebar-navitem-shadow);
+            transform: scale(1.125);
+          }
+        }
+
+        &:nth-of-type(7) {
+          background-image: urls.$sidebar_privacy;
+          border-right-color: colors.$cl_rainbow6;
+
+          &:hover {
+            box-shadow: colors.$cl_rainbow6 unquote($sidebar-navitem-shadow);
+            transform: scale(1.125);
+          }
+        }
+      }
+
+      .sidebar-nav-toggle {
+        display: inline-block;
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        -ms-user-select: none;
+        //noinspection CssBrowserCompatibilityForProperties
+        user-select: none;
+        margin: 0 0 $sidebar-navitem-margin-b 0;
+        background: urls.$chevron_right;
+        width: 32px;
+        height: 32px;
+        transition: 300ms ease-in-out transform;
+
+        &:hover {
+          @include overflows.mx_is_mobile {
+            filter: brightness(0) saturate(100%) invert(79%) sepia(58%) saturate(3168%) hue-rotate(204deg) brightness(104%) contrast(101%);
+            transform: scale(1.125);
+          }
         }
       }
     }
@@ -126,15 +258,38 @@ a {
         transform: scale(1.125);
       }
     }
+
+    @include overflows.mx_mobile {
+      width: 0;
+    }
   }
 
   #content {
-    background: #444;
+    display: flex;
+    //noinspection CssBrowserCompatibilityForProperties
+    flex-direction: column;
+    background: #444444aa;
     margin: 0 0 0 48px;
-    padding: 10px;
+    padding: 50px 10px 10px;
     color: #ccc;
     box-sizing: border-box;
     min-height: 100%;
+
+    p {
+      margin: 0;
+    }
+
+    h1 {
+      margin: 32px 0 0;
+
+      &:first-of-type {
+        margin: 0;
+      }
+    }
+
+    @include overflows.mx_mobile {
+      margin: 0;
+    }
   }
 }
 

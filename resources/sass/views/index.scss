@@ -5,12 +5,8 @@
 @use "../fonts";
 @use "sass:color";
 
-html {
-
-}
-
 #landing {
-
+  height: 100% !important;
 
   main {
     max-width: 100%;
@@ -167,6 +163,10 @@ html {
         &:hover {
           box-shadow: inset 300px 0 0 0 colors.$cl_main_bright;
           color: black;
+
+          &:before {
+            content: "➔";
+          }
         }
 
         &:active {
@@ -178,6 +178,7 @@ html {
     @include overflows.mx_mobile {
       //noinspection CssBrowserCompatibilityForProperties
       flex-direction: column;
+      height: 100%;
 
       #left {
         width: 100%;

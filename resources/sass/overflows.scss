@@ -14,3 +14,12 @@
     @content;
   }
 }
+
+/*  mx_not_mobile
+ *  Matches if viewport is not a mobile device (potentially).
+ */
+@mixin mx_is_mobile {
+  @media (hover: hover) and (pointer: fine) {
+    @content;
+  }
+}
