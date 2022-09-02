@@ -11,7 +11,7 @@
   main {
     max-width: 100%;
     min-height: 100vh;
-    background: colors.$cl_index_bg urls.$background_image;
+    background: linear-gradient(300deg, rgba(251,67,183,1) 0%, rgba(255,201,137,1) 50%, rgba(122,96,203,1) 100%) urls.$background_image;
 
     #left {
       display: flex;
