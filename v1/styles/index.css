@@ -1,0 +1,27 @@
+.blog_list{
+    list-style-type: none;
+    padding: 0;
+}
+
+.blog_list_item{
+    font-size: 16px;
+}
+
+.blog_list_item > a{
+    text-decoration: none;
+}
+
+.blog_list_item > a:hover{
+    text-decoration: underline;
+ }
+
+#contact {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#contact > #buttons > a:hover {
+    background-color: mintcream;
+}
