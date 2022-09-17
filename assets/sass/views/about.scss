@@ -1,43 +1,47 @@
 @use "../fonts";
 @use "../colors";
+@use "../keyframes";
 
-#about {
-  #content {
-    h1 {
-      font: 700 36px fonts.$font-stack;
+#content {
+  h1 {
+    font: 700 36px fonts.$font-stack;
 
-      &:nth-of-type(1) {
-        color: colors.$cl_rainbow1;
-      }
-      &:nth-of-type(2) {
-        color: colors.$cl_rainbow2;
-      }
-      &:nth-of-type(3) {
-        color: colors.$cl_rainbow3;
-      }
-      &:nth-of-type(4) {
-        color: colors.$cl_rainbow4;
-      }
-      &:nth-of-type(5) {
-        color: colors.$cl_rainbow5;
-      }
-      &:nth-of-type(6) {
-        color: colors.$cl_rainbow6;
-      }
+    &:nth-of-type(1) {
+      color: colors.$cl_rainbow1;
     }
+    &:nth-of-type(2) {
+      color: colors.$cl_rainbow2;
+    }
+    &:nth-of-type(3) {
+      color: colors.$cl_rainbow3;
+    }
+    &:nth-of-type(4) {
+      color: colors.$cl_rainbow4;
+    }
+    &:nth-of-type(5) {
+      color: colors.$cl_rainbow5;
+    }
+    &:nth-of-type(6) {
+      color: colors.$cl_rainbow6;
+    }
+  }
 
-    p {
-      font: 500 16px fonts.$font-stack-mono;
+  h1 {
+    color: colors.$cl_them_bright_100 !important;
+  }
 
-      a {
-        color: inherit;
-        font-weight: 600;
-        text-decoration: none;
+  p {
+    font: 500 16px fonts.$font-stack-mono;
+    color: colors.$cl_them_bright_500;
 
-        &:hover {
-          font-style: italic;
-          color: colors.$cl_main_bright;
-        }
+    a {
+      color: inherit;
+      font-weight: 600;
+      text-decoration: none;
+
+      &:hover {
+        font-style: italic;
+        color: colors.$cl_them_bright_100;
       }
     }
   }
