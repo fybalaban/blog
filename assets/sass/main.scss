@@ -4,13 +4,14 @@
 @use "fonts";
 @use "sass:color";
 
-@use "views/index";
-@use "views/about";
-
 $switch-lang-size: 2em;
 $sidebar-navitem-shadow: "20px 0 20px -10px";
 $sidebar-navitem-margin-b: 12px;
 $sidebar-nav-button-margin-lr: 4px;
+
+$header-lr-margin_s: 10px;
+$header-lr-margin_m: 100px;
+$header-lr-margin_l: 200px;
 
 html, body {
   margin: 0;
@@ -49,22 +50,48 @@ a {
 }
 
 .normal {
-  background: colors.$cl_index_bg urls.$background_image;
+  // normal class
+  // given to body element on a page other than index.html
+
+  #bg-overlay {
+    position: fixed;
+    width: 100vw;
+    height: 100vh;
+    z-index: -2;
+
+    background: urls.$background_image, linear-gradient(90deg, rgb(46, 23, 78) 0%, rgb(41, 34, 51) 30%, rgb(93 49 171) 100%);
+    animation: gradient_motion infinite;
+    animation-duration: 8s;
+    background-size: 200% 200%;
+  }
 
   #logo {
     z-index: 98;
     position: fixed;
     top: 10px;
-    left: 10px;
+    left: $header-lr-margin_s;
     color: white;
+    text-decoration: underline;
     font: 600 24px fonts.$font-stack;
     margin: 0;
     transform: perspective(1px) translateZ(0);
-    transition: color ease-in-out 150ms;
+    transition: all ease-in-out 150ms;
 
     &:hover {
-      color: colors.$cl_main_bright;
+      color: colors.$cl_them_bright_100;
       animation: buzz linear infinite 0.15s;
+    }
+
+    @include overflows.mx_header_600 {
+      font-size: 30px;
+    }
+
+    @include overflows.mx_header_1000 {
+      left: $header-lr-margin_m;
+    }
+
+    @include overflows.mx_header_1600 {
+      left: $header-lr-margin_l;
     }
   }
 
@@ -72,14 +99,26 @@ a {
     z-index: 98;
     position: fixed;
     top: 10px;
-    right: 10px;
+    right: $header-lr-margin_s;
     color: white;
     font: 600 24px fonts.$font-stack;
     cursor: pointer;
-    transition: color ease-in-out 150ms;
+    transition: all ease-in-out 150ms;
 
     &:hover {
-      color: colors.$cl_main_bright;
+      color: colors.$cl_them_bright_100;
+    }
+
+    @include overflows.mx_header_600 {
+      font-size: 30px;
+    }
+
+    @include overflows.mx_header_1000 {
+      right: $header-lr-margin_m;
+    }
+
+    @include overflows.mx_header_1600 {
+      right: $header-lr-margin_l;
     }
   }
 
@@ -92,8 +131,12 @@ a {
     margin: 0;
   }
 
-  #toggle-input:checked + #sidebar {
+  #toggle-input:checked ~ #drawer {
     width: 144px !important;
+  }
+
+  #toggle-input:checked ~ #content {
+    filter: brightness(0.5) blur(1px);
   }
 
   #shadow {
@@ -107,133 +150,77 @@ a {
     background: -o-linear-gradient(to bottom, black, transparent);
     background: -moz-linear-gradient(to bottom, black, transparent);
     background: linear-gradient(to bottom, black, transparent);
+
+    @include overflows.mx_header_600 {
+     height: 70px;
+    }
   }
 
-  #sidebar {
+  #drawer {
     position: fixed;
     top: 0;
     left: 0;
+    z-index: 100;
     display: flex;
     //noinspection CssBrowserCompatibilityForProperties
     flex-direction: column;
+    align-items: center;
     justify-content: space-between;
     background: black;
     overflow: hidden;
     height: 100%;
-    // WARNING: This width must be equal to left margin of element #content
-    width: 48px;
+    width: 0;
     transition: 250ms ease-out width;
 
-    &.toggle {
-      width: 48px;
+    #drawer-name {
+      margin: 32px 0 32px;
+      color: white;
+      font-family: fonts.$font-stack;
+      white-space: nowrap; // This prevents the overflow break caused by drawer open/close transition
     }
 
-    #sidebar-logo {
-      //noinspection CssBrowserCompatibilityForProperties
-      place-self: center;
-      margin: 32px 4px 0 4px;
-      border-radius: 16px;
-    }
-
-    #sidebar-nav {
-      .sidebar-navitem {
+    #drawer-nav {
+      .drawer-navitem {
         z-index: 100;
         margin: 0 0 $sidebar-navitem-margin-b 0;
-        display: inline-block;
+        display: block;
         box-sizing: border-box;
         text-decoration: none;
         width: 100%;
         height: 24px;
         color: white;
+        transition: 250ms ease-in transform, 200ms ease-in color;
+        position: relative;
+        font: 400 20px fonts.$font-stack-serif;
 
-        background-repeat: no-repeat;
-        background-position: center;
-
-        transition: 250ms ease-in-out box-shadow, 250ms ease-in transform;
-        border-right: 2px solid;
-
-        &:nth-of-type(1) {
-          background-image: urls.$sidebar_home;
-          border-right-color: colors.$cl_rainbow1;
-          &:hover {
-            box-shadow: colors.$cl_rainbow1 unquote($sidebar-navitem-shadow);
-            transform: scale(1.125);
-          }
+        &:before {
+          position: absolute;
+          content: "";
+          top: 3px;
+          left: -1rem;
+          width: 0.25rem;
+          height: 100%;
+          background: var(--menu-link-active-color);
+          transition: 0.3s;
+          z-index: -1;
         }
 
-        &:nth-of-type(2) {
-          background-image: urls.$sidebar_about_me;
-          border-right-color: colors.$cl_rainbow2;
-          &:hover {
-            box-shadow: colors.$cl_rainbow2 unquote($sidebar-navitem-shadow);
-            transform: scale(1.125);
+        @for $i from 1 through length(colors.$list_cl_rainbox) {
+          &:nth-child(#{$i}) {
+            --menu-link-active-color: #{nth(colors.$list_cl_rainbox, $i)};
           }
         }
-
-        &:nth-of-type(3) {
-          background-image: urls.$sidebar_projects;
-          border-right-color: colors.$cl_rainbow3;
-          &:hover {
-            box-shadow: colors.$cl_rainbow3 unquote($sidebar-navitem-shadow);
-            transform: scale(1.125);
-          }
-        }
-
-        &:nth-of-type(5) {
-          background-image: urls.$sidebar_blog;
-          border-right-color: colors.$cl_rainbow4;
-          &:hover {
-            box-shadow: colors.$cl_rainbow4 unquote($sidebar-navitem-shadow);
-            transform: scale(1.125);
-          }
-        }
-
-        &:nth-of-type(6) {
-          background-image: urls.$sidebar_resume;
-          border-right-color: colors.$cl_rainbow5;
-
-          &:hover {
-            box-shadow: colors.$cl_rainbow5 unquote($sidebar-navitem-shadow);
-            transform: scale(1.125);
-          }
-        }
-
-        &:nth-of-type(7) {
-          background-image: urls.$sidebar_privacy;
-          border-right-color: colors.$cl_rainbow6;
-
-          &:hover {
-            box-shadow: colors.$cl_rainbow6 unquote($sidebar-navitem-shadow);
-            transform: scale(1.125);
-          }
-        }
-      }
-
-      .sidebar-nav-toggle {
-        display: inline-block;
-        -webkit-user-select: none;
-        -moz-user-select: none;
-        -ms-user-select: none;
-        //noinspection CssBrowserCompatibilityForProperties
-        user-select: none;
-        margin: 0 0 $sidebar-navitem-margin-b 0;
-        background: urls.$chevron_right;
-        width: 32px;
-        height: 32px;
-        transition: 300ms ease-in-out transform;
 
         &:hover {
-          @include overflows.mx_is_mobile {
-            filter: brightness(0) saturate(100%) invert(79%) sepia(58%) saturate(3168%) hue-rotate(204deg) brightness(104%) contrast(101%);
-            transform: scale(1.125);
+          color: var(--menu-link-active-color);
+          &::before {
+            left: calc(100% + 1rem);
           }
         }
       }
     }
 
-    #sidebar-switch-lang {
-      //noinspection CssBrowserCompatibilityForProperties
-      place-self: center;
+    #drawer-switch-lang {
       margin: 0 4px 32px 4px;
       display: inline-block;
       border: 1px solid white;
@@ -248,19 +235,15 @@ a {
       font-family: fonts.$font-stack;
       font-weight: 600;
       font-size: 16px;
-      transition: all ease-in-out 250ms;
+      transition: color ease-in-out 250ms, transform ease-in-out 250ms;
 
       &:hover {
-        background-color: colors.$cl_main_bright;
-        border-color: colors.$cl_main_bright;
-        box-shadow: color.scale(colors.$cl_main_bright, $alpha: -34%) 0 0 20px 5px;
+        background-color: colors.$cl_them_bright_100;
+        border-color: colors.$cl_them_bright_100;
+        box-shadow: color.scale(colors.$cl_them_bright_100, $alpha: -34%) 0 0 20px 5px;
         color: black;
         transform: scale(1.125);
       }
-    }
-
-    @include overflows.mx_mobile {
-      width: 0;
     }
   }
 
@@ -268,12 +251,13 @@ a {
     display: flex;
     //noinspection CssBrowserCompatibilityForProperties
     flex-direction: column;
-    background: #444444aa;
-    margin: 0 0 0 48px;
+    background: colors.$cl_main_bg;
+    margin: 0;
     padding: 50px 10px 10px;
     color: #ccc;
     box-sizing: border-box;
     min-height: 100%;
+    transition: 250ms all ease-out;
 
     p {
       margin: 0;
@@ -289,6 +273,15 @@ a {
 
     @include overflows.mx_mobile {
       margin: 0;
+    }
+
+    @include overflows.mx_header_600 {
+      padding-top: 60px;
+    }
+
+    @include overflows.mx_header_1000 {
+      padding-left: 100px;
+      padding-right: 100px;
     }
   }
 }
@@ -311,9 +304,9 @@ a {
   transition: all ease-in-out 250ms;
 
   &:hover {
-    background-color: colors.$cl_main_bright;
-    border-color: colors.$cl_main_bright;
-    box-shadow: color.scale(colors.$cl_main_bright, $alpha: -34%) 0 0 20px 5px;
+    background-color: colors.$cl_them_bright_100;
+    border-color: colors.$cl_them_bright_100;
+    box-shadow: color.scale(colors.$cl_them_bright_100, $alpha: -34%) 0 0 20px 5px;
     color: black;
     transform: scale(1.125);
   }
