@@ -166,7 +166,7 @@ a, .no-highlight {
     flex-direction: column;
     align-items: center;
     justify-content: space-between;
-    background: black;
+    background: colors.$cl_them_dark_700;
     overflow: hidden;
     height: 100%;
     width: 0;
@@ -174,7 +174,7 @@ a, .no-highlight {
 
     #drawer-name {
       margin: 32px 0 32px;
-      color: white;
+      color: colors.$cl_them_bright_700;
       font-family: fonts.$font-stack;
       white-space: nowrap; // This prevents the overflow break caused by drawer open/close transition
     }
@@ -188,7 +188,7 @@ a, .no-highlight {
         text-decoration: none;
         width: 100%;
         height: 24px;
-        color: white;
+        color: colors.$cl_them_bright_700;
         transition: 250ms ease-in transform, 200ms ease-in color;
         position: relative;
         font: 400 20px fonts.$font-stack-serif;
@@ -241,7 +241,7 @@ a, .no-highlight {
         background-color: colors.$cl_them_bright_100;
         border-color: colors.$cl_them_bright_100;
         box-shadow: color.scale(colors.$cl_them_bright_100, $alpha: -34%) 0 0 20px 5px;
-        color: black;
+        color: colors.$cl_them_dark_700;
         transform: scale(1.125);
       }
     }
