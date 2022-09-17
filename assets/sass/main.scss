@@ -171,12 +171,12 @@ a, .no-highlight {
     height: 100%;
     width: 0;
     transition: 250ms ease-out width;
+    white-space: nowrap; // This prevents the overflow break caused by drawer open/close transition
 
     #drawer-name {
       margin: 32px 0 32px;
       color: colors.$cl_them_bright_700;
       font-family: fonts.$font-stack;
-      white-space: nowrap; // This prevents the overflow break caused by drawer open/close transition
     }
 
     #drawer-nav {
