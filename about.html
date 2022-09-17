@@ -3,46 +3,47 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1"/>
+    <meta name="color-scheme" content="light dark">
     <meta name="description" content="">
     <title>About me | fybx</title>
-    <link type="text/css" rel="stylesheet" href="resources/css/main.css">
-    <script src="resources/js/main.js" defer></script>
+    <link type="text/css" rel="stylesheet" href="assets/css/main.css">
+    <link type="text/css" rel="stylesheet" href="assets/css/views/about.css">
 </head>
-<body id="about" class="normal">
-<input id="toggle-input" type="checkbox" onclick="t()">
-<label id="toggle-label" for="toggle-input">
-    <span>menu</span>
-</label>
-<a id="logo" href="index.html">fybx.</a>
-<div id="shadow"></div>
-<aside id="sidebar">
-    <img id="sidebar-logo" src="resources/imgs/fybx.webp" alt="A cute picture of me!" title="A cute picture of me!" width="40">
-    <nav id="sidebar-nav">
-        <a class="sidebar-navitem" href="index.html" title="Home"></a>
-        <a class="sidebar-navitem" href="#" title="About me"></a>
-        <a class="sidebar-navitem" href="projects.html" title="Projects"></a>
-        <a class="sidebar-nav-toggle" onclick="t()"></a>
-        <a class="sidebar-navitem" href="blog.html" title="Blog"></a>
-        <a class="sidebar-navitem" href="resume.html" title="Résumé"></a>
-        <a class="sidebar-navitem" href="privacy.html" title="Privacy"></a>
-    </nav>
-    <a id="sidebar-switch-lang" href="#" title="Bu sayfayı Türkçe görüntüle">Tr</a>
-</aside>
-<main id="content">
-    <h1>i'm ferit.</h1>
-    <p>I am Ferit Yiğit BALABAN, Computer Engineering undergradute (currently in second grade) and a software engineer candidate.</p>
-    <h1>growing up</h1>
-    <p>I was in my four's when I was introduced to computers, and after two years of pondering around Windows Vista, I met the Internet. Oh, boy. From Flash games to the vast knowledge in Wikipedia, I was an explorer who've just dug out a small piece of an ancient city. Somewhere between my 10's to 12's, all this interest of anything and everything in the internet gradually shifted to the machine that brought what I ordered from it.</p>
-    <h1>hello world.</h1>
-    <p>Just dreaming and fantasizing about computers, and electricity of course, wasn't enough for me. That was the point which I came across programming. I was quickly interested in electronics and Arduinos! As a beginner, I was fluent in Scratch (lol) until I discovered C++, gave it a shot and got frustrated.</p>
-    <h1>microsoft, &lt3 => &lt/3</h1>
-    <p>From 2019 to 2022, I developed many Windows desktop applications using C# with WinForms. Late in 2021, I started using Ubuntu (an <a href="tribute.html">GNU+Linux</a> distro) which led me to experiment with the idea of cross-platform applications. Currently, I'm on an Arch Linux machine, with i3-gaps, polybar and kitty!</p>
-    <p>I do, and will do my part to support the “Free as in Freedom„ philosopy, and the community of Free and Open Source Software.</p>
-    <h1>in conclusion.</h1>
-    <p>I'm interested in web design and frontend development; machine learning, especially natural language processing; systems development and operating systems; mathematics. In addition to all those stuff that we can't touch with our fingers, I have a strong affection to electronics, processor design and logic circuits.</p>
-    <h1>closing note</h1>
-    <p>I love static webpages with their own personalities and worlds, which was the main inspiration for this site! I am not a designer, (one day, hopefully, I will remove this line) but I gave up my sleep for a couple of weeks to come up with what you're seeing right now! That's why your comments are so important.</p>
-    <p>Saw something wrong, wacky or just cringe? <a href="https://github.com/fybx/blog/issues/new">Let me know</a>. Have a suggestion? <a href="https://github.com/fybx/blog/issues/new">Let me know</a>. Want to be friends? <a href="https://instagram.com/ferityigitbalaban">Let me... you can find me on Instagram ;)</a></p>
-</main>
+<body class="normal">
+    <div id="bg-overlay"></div>
+    <input id="toggle-input" type="checkbox">
+    <label id="toggle-label" for="toggle-input">
+        <span>menu</span>
+    </label>
+    <aside id="drawer">
+        <p id="drawer-name">ferit yiğit <b>balaban</b></p>
+        <nav id="drawer-nav">
+            <a class="drawer-navitem" href="index.html" title="home">home</a>
+            <a class="drawer-navitem" href="#" title="about me">about me</a>
+            <a class="drawer-navitem" href="projects.html" title="projects">projects</a>
+            <a class="drawer-navitem" href="blog.html" title="blog">blog</a>
+            <a class="drawer-navitem" href="resume.html" title="résumé">résumé</a>
+            <a class="drawer-navitem" href="privacy.html" title="privacy">privacy</a>
+        </nav>
+        <a id="drawer-switch-lang" href="#" title="Bu sayfayı Türkçe görüntüle">Tr</a>
+    </aside>
+    <h1 id="logo">fybx.</h1>
+    <div id="shadow"></div>
+    <main id="content">
+        <h1>i'm ferit.</h1>
+        <p>I am Ferit Yiğit BALABAN, Computer Engineering undergradute (currently in second grade) and a software engineer candidate.</p>
+        <h1>growing up</h1>
+        <p>I was in my four's when I was introduced to computers, and after two years of pondering around Windows Vista, I met the Internet. Oh, boy. From Flash games to the vast knowledge in Wikipedia, I was an explorer who've just dug out a small piece of an ancient city. Somewhere between my 10's to 12's, all this interest of anything and everything in the internet gradually shifted to the machine that brought what I ordered from it.</p>
+        <h1>hello world.</h1>
+        <p>Just dreaming and fantasizing about computers, and electricity of course, wasn't enough for me. That was the point which I came across programming. I was quickly interested in electronics and Arduinos! As a beginner, I was fluent in Scratch (lol) until I discovered C++, gave it a shot and got frustrated.</p>
+        <h1>microsoft, &lt3 => &lt/3</h1>
+        <p>From 2019 to 2022, I developed many Windows desktop applications using C# with WinForms. Late in 2021, I started using Ubuntu (an <a href="tribute.html">GNU+Linux</a> distro) which led me to experiment with the idea of cross-platform applications. Currently, I'm on an Arch Linux machine, with i3-gaps, polybar and kitty!</p>
+        <p>I do, and will do my part to support the “Free as in Freedom„ philosopy, and the community of Free and Open Source Software.</p>
+        <h1>in conclusion.</h1>
+        <p>I'm interested in web design and frontend development; machine learning, especially natural language processing; systems development and operating systems; mathematics. In addition to all those stuff that we can't touch with our fingers, I have a strong affection to electronics, processor design and logic circuits.</p>
+        <h1>closing note</h1>
+        <p>I love static webpages with their own personalities and worlds, which was the main inspiration for this site! I am not a designer, (one day, hopefully, I will remove this line) but I gave up my sleep for a couple of weeks to come up with what you're seeing right now! That's why your comments are so important.</p>
+        <p>Saw something wrong, wacky or just cringe? <a href="https://github.com/fybx/blog/issues/new">Let me know</a>. Have a suggestion? <a href="https://github.com/fybx/blog/issues/new">Let me know</a>. Want to be friends? <a href="https://instagram.com/ferityigitbalaban">Let me... you can find me on Instagram ;)</a></p>
+    </main>
 </body>
 </html>
