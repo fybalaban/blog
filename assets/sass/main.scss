@@ -103,6 +103,15 @@ a, .no-highlight {
     }
   }
 
+  #toggle-surface {
+    position: fixed;
+    right: 0;
+    width: calc(100vw - 144px);
+    height: 100%;
+    z-index: 100;
+    display: none;
+  }
+
   #toggle-label {
     z-index: 98;
     position: fixed;
@@ -143,6 +152,10 @@ a, .no-highlight {
 
   #toggle-input:checked ~ #drawer {
     width: 144px !important;
+  }
+
+  #toggle-input:checked ~ #toggle-surface {
+    display: block;
   }
 
   #toggle-input:checked ~ #content {
