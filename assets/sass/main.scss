@@ -3,6 +3,7 @@
 @use "urls";
 @use "fonts";
 @use "sass:color";
+@use "sass:math";
 
 $switch-lang-size: 2em;
 $sidebar-navitem-shadow: "20px 0 20px -10px";
@@ -12,6 +13,11 @@ $sidebar-nav-button-margin-lr: 4px;
 $header-lr-margin_s: 10px;
 $header-lr-margin_m: 100px;
 $header-lr-margin_l: 200px;
+
+$header-font-size_s: 24px;
+$header-font-size_m: 30px;
+$header-font-size_l: 36px;
+$header-font-size_x: 42px;
 
 html, body {
   margin: 0;
@@ -72,7 +78,7 @@ a, .no-highlight {
     left: $header-lr-margin_s;
     color: white;
     text-decoration: underline;
-    font: 600 24px fonts.$font-stack;
+    font: 600 $header-font-size_s fonts.$font-stack;
     margin: 0;
     transform: perspective(1px) translateZ(0);
     transition: all ease-in-out 150ms;
@@ -83,14 +89,16 @@ a, .no-highlight {
     }
 
     @include overflows.mx_header_600 {
-      font-size: 30px;
+      font-size: $header-font-size_m;
     }
 
     @include overflows.mx_header_1000 {
+      font-size: $header-font-size_l;
       left: $header-lr-margin_m;
     }
 
     @include overflows.mx_header_1600 {
+      font-size: $header-font-size_x;
       left: $header-lr-margin_l;
     }
   }
@@ -110,14 +118,16 @@ a, .no-highlight {
     }
 
     @include overflows.mx_header_600 {
-      font-size: 30px;
+      font-size: $header-font-size_m;
     }
 
     @include overflows.mx_header_1000 {
+      font-size: $header-font-size_l;
       right: $header-lr-margin_m;
     }
 
     @include overflows.mx_header_1600 {
+      font-size: $header-font-size_x;
       right: $header-lr-margin_l;
     }
   }
@@ -152,7 +162,15 @@ a, .no-highlight {
     background: linear-gradient(to bottom, black, transparent);
 
     @include overflows.mx_header_600 {
-     height: 70px;
+      height: 2 * $header-font-size_m + 10;
+    }
+
+    @include overflows.mx_header_1000 {
+      height: 2 * $header-font-size_l + 10;
+    }
+
+    @include overflows.mx_header_1600 {
+      height: 2 * $header-font-size_x + 10;
     }
   }
 
@@ -276,12 +294,15 @@ a, .no-highlight {
     }
 
     @include overflows.mx_header_600 {
-      padding-top: 60px;
+      padding: 2 * $header-font-size_m + 10 2 * $header-lr-margin_s 0;
     }
 
     @include overflows.mx_header_1000 {
-      padding-left: 100px;
-      padding-right: 100px;
+      padding: 2 * $header-font-size_l + 10 2 * $header-lr-margin_m 0;
+    }
+
+    @include overflows.mx_header_1600 {
+      padding: 2 * $header_font-size_x + 10 2 * $header-lr-margin_l 0;
     }
   }
 }
