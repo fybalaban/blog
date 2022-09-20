@@ -19,6 +19,10 @@ $header-font-size_m: 30px;
 $header-font-size_l: 36px;
 $header-font-size_x: 42px;
 
+$drawer-size_s: 144px;
+$drawer-size_m: 240px;
+$drawer-size_l: 360px;
+
 html, body {
   margin: 0;
   padding: 0;
@@ -151,7 +155,15 @@ a, .no-highlight {
   }
 
   #toggle-input:checked ~ #drawer {
-    width: 144px !important;
+    width: $drawer-size_s;
+
+    @include overflows.mx_header_600 {
+      width: $drawer-size_m;
+    }
+
+    @include overflows.mx_header_1600 {
+      width: $drawer-size_l;
+    }
   }
 
   #toggle-input:checked ~ #toggle-surface {
@@ -274,6 +286,36 @@ a, .no-highlight {
         box-shadow: color.scale(colors.$cl_them_bright_100, $alpha: -34%) 0 0 20px 5px;
         color: colors.$cl_them_dark_700;
         transform: scale(1.125);
+      }
+    }
+
+    @include overflows.mx_header_600 {
+      #drawer-name {
+        font-size: 26px;
+      }
+
+      #drawer-nav > .drawer-navitem {
+        &:before {
+          top: 4px;
+          height: 120%;
+        }
+        margin: 0 0 14px 0;
+        font-size: 26px;
+      }
+    }
+
+    @include overflows.mx_header_600 {
+      #drawer-name {
+        font-size: 36px;
+      }
+
+      #drawer-nav > .drawer-navitem {
+        &:before {
+          top: 8px;
+          height: 160%;
+        }
+        margin: 0 0 28px 0;
+        font-size: 36px;
       }
     }
   }
