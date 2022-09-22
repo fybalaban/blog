@@ -3,6 +3,7 @@
 @use "urls";
 @use "fonts";
 @use "variables";
+@use "keyframes";
 @use "sass:color";
 @use "partials/header";
 @use "partials/footer";
@@ -60,9 +61,6 @@ a, .no-highlight {
   }
 
   #content {
-    display: flex;
-    //noinspection CssBrowserCompatibilityForProperties
-    flex-direction: column;
     background: colors.$cl_main_bg;
     margin: 0;
     padding: 50px 10px 10px;
