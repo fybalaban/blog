@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" id="contact">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
@@ -9,7 +9,58 @@
   <link type="text/css" rel="stylesheet" href="assets/css/main.css">
   <link type="text/css" rel="stylesheet" href="assets/css/views/contact.css">
 </head>
-<body>
+<body class="normal">
+  <div id="bg-overlay"></div>
+  <header>
+    <input id="toggle-input" type="checkbox" autocomplete="off">
+    <label id="toggle-label" class="no-highlight" for="toggle-input">
+      <span>menu</span>
+    </label>
+    <label id="toggle-surface" for="toggle-input"></label>
+    <aside id="drawer">
+      <p id="drawer-name">ferit yiğit <b>balaban</b></p>
+      <nav id="drawer-nav">
+        <a class="drawer-navitem" href="index.html" title="home">home</a>
+        <a class="drawer-navitem" href="about.html" title="about me">about me</a>
+        <a class="drawer-navitem" href="projects.html" title="projects">projects</a>
+        <a class="drawer-navitem" href="blog.html" title="blog">blog</a>
+        <a class="drawer-navitem" href="resume.html" title="résumé">résumé</a>
+        <a class="drawer-navitem" href="#" title="privacy">contact</a>
+      </nav>
+      <a id="drawer-switch-lang" href="tr/iletisim.html" title="Bu sayfayı Türkçe görüntüle">Tr</a>
+    </aside>
+    <h1 id="logo" class="no-highlight">fybx.</h1>
+    <div id="shadow"></div>
+  </header>
+  <main id="content">
+    <h1 class="barrier">let's <span>connect</span></h1>
+    <hr class="barrier-rule">
+    <ul class="link-list">
+      <!-- TODO
+Send me an e-mail
+Code with me on GitHub
+See my tweets
+Add me to your network
+Check my Instagram
+View old artworks
 
+E-mail
+GitHub
+Twitter
+LinkedIn
+Instagram
+DeviantArt
+       -->
+      <li><a href="mailto:f@fybx.dev?subject=Hey! Nice website Ferit">Send an e-mail</a></li>
+      <li><a href="https://github.com/fybx" target="_blank">Visit my repos</a></li>
+      <li><a href="https://twitter.com/fybxdev" target="_blank">See my tweets</a></li>
+      <li><a href="https://linkedin.com/in/fybx" target="_blank">Join my network</a></li>
+      <li><a href="https://instagram.com/ferityigitbalaban" target="_blank">Check my Instagram</a></li>
+      <li><a href="https://deviantart.com/depressionalist" target="_blank">View old artworks</a></li>
+    </ul>
+    <h1 class="barrier place-right"><span>?</span>securely</h1>
+    <hr class="barrier-rule">
+    PGP ID: 75A48025A5B897E4 (f@fybx.dev)
+  </main>
 </body>
 </html>
