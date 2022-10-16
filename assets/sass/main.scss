@@ -128,3 +128,8 @@ a, .no-highlight {
     font-size: 4vmin;
   }
 }
+
+.place-right {
+  // very dirty solution but it works :D
+  direction: rtl;
+}
