@@ -10,6 +10,7 @@ html {
   max-width: 100%;
   min-height: 100vh;
   background: none !important;
+  font-family: fonts.$font-stack;
 
   .barrier {
     color: colors.$cl_them_bright_600;
@@ -27,36 +28,53 @@ html {
   }
 
   .list-contact-links {
-    li {
-      color: colors.$cl_them_bright_600;
+    .link {
+      color: colors.$cl_them_bright_500;
+      font: 600 35px fonts.$font-stack-serif;
+      letter-spacing: 2px;
+      transition: letter-spacing 250ms ease, color 250ms ease;
 
-      .link {
-        font: 35px fonts.$font-stack-serif;
-        -webkit-text-stroke: 1px colors.$cl_them_bright_600;
-        -webkit-text-fill-color: transparent;
-        font-variant: petite-caps;
-        color: transparent;
+      &:hover {
+        -webkit-text-fill-color: initial !important;
+        color: colors.$cl_them_bright_700;
+        letter-spacing: 0;
+      }
 
-        &:hover {
-          -webkit-text-fill-color: initial !important;
-          color: colors.$cl_them_bright_700;
-        }
+      &:before {
+        font-weight: 100;
+        //noinspection CssBrowserCompatibilityForProperties
+        mix-blend-mode: difference;
+        content: "↗";
       }
     }
   }
 
   #sec-securely {
     text-align: right;
-    font-family: fonts.$font-stack;
-    font-size: 20px;
+    font-size: 25px;
     color: colors.$cl_them_bright_600;
 
     #pgp-download {
-      color: inherit;
+      font: 600 28px fonts.$font-stack-serif;
+      color: colors.$cl_them_bright_500;
+      letter-spacing: 2px;
+      transition: letter-spacing 250ms ease, color 250ms ease;
+
+      &:hover {
+        color: colors.$cl_them_bright_700;
+        letter-spacing: 0;
+      }
+
+      &:after {
+        content: "↓";
+        font-family: fonts.$font-stack;
+        //noinspection CssBrowserCompatibilityForProperties
+        mix-blend-mode: difference;
+      }
     }
 
     #pgp-copy-id {
-      font: 500 20px fonts.$font-stack-mono;
+      font: 500 25px fonts.$font-stack-mono;
     }
 
     .pgp-warning {
