@@ -44,6 +44,10 @@ a, .no-highlight {
   user-select: none;
 }
 
+a {
+  text-decoration: none;
+}
+
 .normal {
   // normal class
   // given to body element on a page other than index.html
