@@ -48,6 +48,13 @@ a {
   text-decoration: none;
 }
 
+ul {
+  padding: 0;
+  li {
+    list-style-type: none;
+  }
+}
+
 .normal {
   // normal class
   // given to body element on a page other than index.html
