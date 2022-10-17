@@ -111,22 +111,22 @@
       top: 0;
       left: 0;
       width: 100%;
-      height: 60px;
+      height: 80px;
       background: -webkit-linear-gradient(to bottom, black, transparent);
       background: -o-linear-gradient(to bottom, black, transparent);
       background: -moz-linear-gradient(to bottom, black, transparent);
       background: linear-gradient(to bottom, black, transparent);
 
       @include overflows.mx_header_600 {
-        height: 2 * variables.$header-font-size_m + 10;
+        height: 2 * variables.$header-font-size_m + 32;
       }
 
       @include overflows.mx_header_1000 {
-        height: 2 * variables.$header-font-size_l + 10;
+        height: 2 * variables.$header-font-size_l + 32;
       }
 
       @include overflows.mx_header_1600 {
-        height: 2 * variables.$header-font-size_x + 10;
+        height: 2 * variables.$header-font-size_x + 32;
       }
     }
 
