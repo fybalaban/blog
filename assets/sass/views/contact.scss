@@ -15,7 +15,7 @@ html {
     color: colors.$cl_them_bright_600;
     font: 400 45px fonts.$font-stack;
     span {
-      font: 700 45px fonts.$font-stack;
+      font: 700 50px fonts.$font-stack;
     }
   }
 
@@ -26,24 +26,40 @@ html {
     border-bottom: 0;
   }
 
-  .link-list {
-    padding: 0;
+  .list-contact-links {
     li {
-      color: colors.$cl_them_bright_500;
-      list-style: none;
+      color: colors.$cl_them_bright_600;
 
-      a {
-        font: 30px fonts.$font-stack-serif;
-        -webkit-text-stroke: 1px colors.$cl_them_bright_400;
+      .link {
+        font: 35px fonts.$font-stack-serif;
+        -webkit-text-stroke: 1px colors.$cl_them_bright_600;
         -webkit-text-fill-color: transparent;
         font-variant: petite-caps;
-        color: inherit;
-        text-decoration: none;
+        color: transparent;
 
         &:hover {
-          -webkit-text-fill-color: colors.$cl_them_bright_700;
+          -webkit-text-fill-color: initial !important;
+          color: colors.$cl_them_bright_700;
         }
       }
+    }
+  }
+
+  #sec-securely {
+    text-align: right;
+    font-family: fonts.$font-stack;
+    font-size: 20px;
+    color: colors.$cl_them_bright_600;
+
+    #pgp-download {
+      color: inherit;
+    }
+
+    #pgp-copy-id {
+      font: 500 20px fonts.$font-stack-mono;
+    }
+
+    .pgp-warning {
     }
   }
 
