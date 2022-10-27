@@ -97,10 +97,6 @@ ul {
       }
     }
 
-    .under-construction {
-      text-align: center;
-    }
-
     @include overflows.mx_mobile {
       margin: 0;
     }
@@ -115,6 +111,24 @@ ul {
 
     @include overflows.mx_header_1600 {
       padding: 2 * variables.$header_font-size_x + 10 2 * variables.$header-lr-margin_l 0;
+    }
+  }
+
+  .under-construction {
+    // under-construction class
+    // given to #content when content is empty
+
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+
+    img {
+      width: 250px;
+      height: 250px;
+    }
+
+    p {
+      font-family: fonts.$font-stack-mono;
     }
   }
 }
