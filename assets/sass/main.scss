@@ -31,6 +31,8 @@ body {
   min-height: -moz-available;
   //noinspection CssInvalidPropertyValue
   min-height: fill-available;
+  display: flex;
+  flex-flow: column;
 }
 
 a, .no-highlight {
@@ -78,7 +80,10 @@ ul {
     color: #ccc;
     box-sizing: border-box;
     min-height: 100%;
-    transition: 250ms all ease-out;
+    flex-grow: 1;
+    // i don't remember why I added a transition to parent content block
+    // but I am too scared to remove it completely...
+    //transition: 250ms all ease-out;
 
     p {
       margin: 0;
@@ -90,6 +95,10 @@ ul {
       &:first-of-type {
         margin: 0;
       }
+    }
+
+    .under-construction {
+      text-align: center;
     }
 
     @include overflows.mx_mobile {
