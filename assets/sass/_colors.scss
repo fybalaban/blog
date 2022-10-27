@@ -1,0 +1,32 @@
+$cl_index_bg: #121212;
+$cl_heading_fg: #7a60cb;
+$cl_main_bg: rgba(41, 34, 51, 0.6);
+
+// Thematic bright for texts and objects weight 100 to 500. Higher is less saturated
+// https://colordesigner.io/#CAA8FF-CFB3FF-D7BFFF-DFCCFF-E7D9FF
+$cl_them_bright_100: #caa8ff;
+$cl_them_bright_200: #cfb3ff;
+$cl_them_bright_300: #d7bfff;
+$cl_them_bright_400: #dfccff;
+$cl_them_bright_500: #e7d9ff;
+$cl_them_bright_600: #efe6ff;
+$cl_them_bright_700: #f7f2ff;
+
+// Thematic dark for surfaces weight 100 to 500. Higher is darker
+// https://colordesigner.io/#4F4366-433759-392F4D-332640-291F33
+$cl_them_dark_100: #4F4366;
+$cl_them_dark_200: #433759;
+$cl_them_dark_300: #392F4D;
+$cl_them_dark_400: #332640;
+$cl_them_dark_500: #291F33;
+$cl_them_dark_600: #1f1726;
+$cl_them_dark_700: #15101a;
+
+$cl_rainbow1: #ff4d4a;
+$cl_rainbow2: #ffb44a;
+$cl_rainbow3: #fcfc49;
+$cl_rainbow4: #41e041;
+$cl_rainbow5: #3ca5cf;
+$cl_rainbow6: #cc3bc2;
+
+$list_cl_rainbox: $cl_rainbow1 $cl_rainbow2 $cl_rainbow3 $cl_rainbow4 $cl_rainbow5 $cl_rainbow6;

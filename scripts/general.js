@@ -20,7 +20,7 @@ function loadHeader() {
         document.getElementById("header").innerHTML = `
 <!-- This header is suitable for pages in subfolders -->
 <div class="static">
-    <img class="profile_picture" src="../images/photo.png" alt="A cute picture of me!">
+    <img class="profile_picture" src="../resources/imgs/photo.png" alt="A cute picture of me!">
     <div class="title">
         <h1>Ferit Yiğit BALABAN</h1>
         <h2>Bilgisayar Mühendisliği öğrencisi</h2>
@@ -38,7 +38,7 @@ function loadHeader() {
         document.getElementById("header").innerHTML = `
 <!-- This header is suitable for pages on root -->
 <div class="static">
-    <img class="profile_picture" src="images/photo.png" alt="A cute picture of me!">
+    <img class="profile_picture" src="resources/imgs/photo.png" alt="A cute picture of me!">
     <div class="title">
         <h1>Ferit Yiğit BALABAN</h1>
         <h2>Bilgisayar Mühendisliği öğrencisi</h2>
@@ -66,7 +66,7 @@ function loadFooter() {
     <img src="https://mirrors.creativecommons.org/presskit/icons/sa.svg" alt="ShareAlike">
 </a>
 <a href="https://yesterweb.org/no-to-web3/"><img src="https://yesterweb.org/no-to-web3/img/roly-saynotoweb3.gif" alt="Say No to Web3!"></a>
-<a href="../privacy.html" title="Gizliliğiniz hakkında"><img src="../images/nocookie.gif" alt="This website does not use cookies."></a>
+<a href="../privacy.html" title="Gizliliğiniz hakkında"><img src="../resources/imgs/nocookie.gif" alt="This website does not use cookies."></a>
 <hr>
 <h4 class="monospaced">Created with <3 on <a href="https://www.jetbrains.com/webstorm/">JetBrains WebStorm</a></h4>`;
     }
@@ -81,7 +81,7 @@ function loadFooter() {
     <img src="https://mirrors.creativecommons.org/presskit/icons/sa.svg" alt="ShareAlike">
 </a>
 <a href="https://yesterweb.org/no-to-web3/"><img src="https://yesterweb.org/no-to-web3/img/roly-saynotoweb3.gif" alt="Say No to Web3!"></a>
-<a href="privacy.html" title="Gizliliğiniz hakkında"><img src="images/nocookie.gif" alt="This website does not use cookies."></a>
+<a href="privacy.html" title="Gizliliğiniz hakkında"><img src="resources/imgs/nocookie.gif" alt="This website does not use cookies."></a>
 <hr>
 <h4 class="monospaced">Created with <3 on <a href="https://www.jetbrains.com/webstorm/">JetBrains WebStorm</a></h4>`;
     }

@@ -1,0 +1,25 @@
+@use "../fonts";
+@use "../colors";
+
+#content {
+  h1 {
+    font: 700 36px fonts.$font-stack;
+    color: colors.$cl_them_bright_100;
+  }
+
+  p {
+    font: 500 16px fonts.$font-stack-mono;
+    color: colors.$cl_them_bright_500;
+
+    a {
+      color: inherit;
+      font-weight: 600;
+      text-decoration: none;
+
+      &:hover {
+        font-style: italic;
+        color: colors.$cl_them_bright_100;
+      }
+    }
+  }
+}

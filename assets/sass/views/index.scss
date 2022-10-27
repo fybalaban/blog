@@ -1,0 +1,384 @@
+@use "../colors";
+@use "../keyframes";
+@use "../overflows";
+@use "../urls";
+@use "../fonts";
+@use "sass:color";
+
+html {
+  height: 100% !important;
+}
+
+main {
+  max-width: 100%;
+  min-height: 100vh;
+  background-image: linear-gradient(to right, #b8cbb8 0%, #b8cbb8 0%, #b465da 0%, #cf6cc9 33%, #ee609c 66%, #ee609c 100%);
+  animation: gradient_motion infinite;
+  animation-duration: 8s;
+  background-size: 200% 200%;
+
+
+  #left {
+    display: flex;
+    //noinspection CssBrowserCompatibilityForProperties
+    flex-direction: column;
+    justify-content: center;
+    height: 100vh;
+    width: 50%;
+
+    background: #111111dd;
+    color: white;
+    animation: 1000ms ease-out 0ms 1 slide-in-left;
+
+    h1 {
+      font: 700 5vmin "IBM Plex", fonts.$font-stack;
+      margin: 5vmin;
+    }
+
+    h2 {
+      font: 600 4vmin fonts.$font-stack;
+      margin: 0 4vmin 4vmin 5vmin;
+    }
+
+    p {
+      font: 500 2vmin fonts.$font-stack;
+      margin: 0 3vmin 3vmin 5vmin;
+    }
+
+    a {
+      display: inline-block;
+      color: white;
+      text-decoration: none;
+
+      &:hover {
+        color: colors.$cl_them_bright_100;
+        font-style: italic;
+      }
+
+      &:active {
+        transform: scale(1.03);
+      }
+    }
+
+    #social-nav {
+      display: inline-flex;
+      //noinspection CssBrowserCompatibilityForProperties
+      flex-direction: row;
+      margin: 4vmin 0 4vmin 5vmin;
+
+      .social-button {
+        border-radius: 16px;
+        width: 4vmin;
+        height: 4vmin;
+        margin: 0 2vmin 0 0;
+        padding: 1vmin;
+        transition: transform 250ms ease-out;
+
+        img {
+          width: 100%;
+        }
+
+        &:last-of-type {
+          margin: 0;
+        }
+
+        &:hover {
+          transform: scale(1.125);
+
+          img {
+            filter: brightness(0) !important;
+          }
+        }
+
+        &:nth-of-type(1) {
+          border: solid 2px colors.$cl_rainbow1;
+
+          &:hover {
+            background: colors.$cl_rainbow1;
+            box-shadow: color.scale(colors.$cl_rainbow1, $alpha: -34%) 0 0 20px 5px;
+          }
+        }
+
+        &:nth-of-type(2) {
+          border: solid 2px colors.$cl_rainbow2;
+
+          img {
+            filter: brightness(0) saturate(100%) invert(99%) sepia(1%) saturate(1446%) hue-rotate(215deg) brightness(111%) contrast(100%);;
+          }
+
+          &:hover {
+            background: colors.$cl_rainbow2;
+            box-shadow: color.scale(colors.$cl_rainbow2, $alpha: -34%) 0 0 20px 5px;
+          }
+        }
+
+        &:nth-of-type(3) {
+          border: solid 2px colors.$cl_rainbow3;
+
+          &:hover {
+            background: colors.$cl_rainbow3;
+            box-shadow: color.scale(colors.$cl_rainbow3, $alpha: -34%) 0 0 20px 5px;
+          }
+        }
+
+        &:nth-of-type(4) {
+          border: solid 2px colors.$cl_rainbow4;
+
+          &:hover {
+            background: colors.$cl_rainbow4;
+            box-shadow: color.scale(colors.$cl_rainbow4, $alpha: -34%) 0 0 20px 5px;
+          }
+        }
+
+        &:nth-of-type(5) {
+          border: solid 2px colors.$cl_rainbow5;
+
+          &:hover {
+            background: colors.$cl_rainbow5;
+            box-shadow: color.scale(colors.$cl_rainbow5, $alpha: -34%) 0 0 20px 5px;
+          }
+        }
+      }
+    }
+  }
+
+  #site-nav {
+    position: fixed;
+    bottom: 5vmin;
+    right: 5vmin;
+
+    display: flex;
+    //noinspection CssBrowserCompatibilityForProperties
+    flex-direction: column;
+    align-items: flex-end;
+
+    animation: 1000ms slide-fade-in-right 0ms ease-out 1;
+    color: white;
+
+    $text-arrow-space: 1vmin;
+    $shaft-width: 8vmin;
+    $shaft-thickness: calc(1vmin/4);
+    $arrow-head-width: 1vmin;
+    $arrow-head-thickness: $shaft-thickness;
+
+    a {
+      display: inline-block;
+      margin: 0 0 0.8vmin 0;
+      color: #FFFFFF;
+      font: 600 4vmin fonts.$font-stack-serif;
+      text-decoration: none;
+      position: relative;
+      transition: all 0.2s;
+
+      &:hover {
+        font-style: italic;
+
+        .the-arrow.-left {
+          .shaft {
+            width: $shaft-width;
+            transition-delay: 0.1s;
+            background-color: #FFF;
+
+            &:before, &:after {
+              width: $arrow-head-width;
+              transition-delay: 0.1s;
+              background-color: #FFF;
+            }
+
+            &:before {
+              transform: rotate(40deg);
+            }
+
+            &:after {
+              transform: rotate(-40deg);
+            }
+          }
+        }
+
+        .main {
+          transform: translateX($shaft-width + $text-arrow-space);
+
+          .the-arrow.-right {
+            .shaft {
+              width: 0;
+              transform: translateX(200%);
+              transition-delay: 0s;
+
+              &:before,
+              &:after {
+                width: 0;
+                transition-delay: 0s;
+                transition: all 0.1s;
+              }
+
+              &:before {
+                transform: rotate(0);
+              }
+
+              &:after {
+                transform: rotate(0);
+              }
+            }
+          }
+
+          .text {
+            filter: drop-shadow(1px 1px 1px #000);
+          }
+        }
+      }
+
+      .the-arrow {
+        width: $shaft-width;
+        transition: all 0.2s;
+
+        &.-left {
+          position: absolute;
+          top: 55%;
+          left: 0;
+
+          .shaft {
+            width: 0;
+            background-color: #FFF;
+
+            &:before, &:after {
+              width: 0;
+              background-color: #FFF;
+            }
+
+            &:before {
+              transform: rotate(0);
+            }
+
+            &:after {
+              transform: rotate(0);
+            }
+          }
+        }
+
+        &.-right {
+          top: 3px;
+
+          .shaft {
+            width: $shaft-width;
+            transition-delay: 0.2s;
+
+            &:before, &:after {
+              width: $arrow-head-width;
+              transition-delay: 0.3s;
+              transition: all 0.5s;
+            }
+
+            &:before {
+              transform: rotate(40deg);
+            }
+
+            &:after {
+              transform: rotate(-40deg);
+            }
+          }
+        }
+
+        .shaft {
+          background-color: #FFF;
+          display: block;
+          height: $shaft-thickness;
+          position: relative;
+          transition: all 0.2s;
+          transition-delay: 0s;
+          //noinspection CssBrowserCompatibilityForProperties
+          will-change: transform;
+
+          &:before, &:after {
+            background-color: #FFF;
+            content: '';
+            display: block;
+            height: $arrow-head-thickness;
+            position: absolute;
+            top: 0;
+            right: 0;
+            transition: all 0.2s;
+            transition-delay: 0s;
+          }
+
+          &:before {
+            transform-origin: top right;
+          }
+
+          &:after {
+            transform-origin: bottom right;
+          }
+        }
+      }
+
+      .main {
+        display: flex;
+        align-items: center;
+        transition: all 0.2s;
+
+        .text {
+          margin: 0 $text-arrow-space 0 0;
+          line-height: 1;
+        }
+
+        .the-arrow {
+          position: relative;
+        }
+      }
+    }
+  }
+
+  #site-hint {
+    position: absolute;
+    top: 5vmin;
+    left: calc(50% + 5vmin);
+    animation: 1000ms ease-in-out fade-in;
+    filter: invert(1);
+    width: 24px;
+  }
+
+  @include overflows.mx_mobile {
+    //noinspection CssBrowserCompatibilityForProperties
+    flex-direction: column;
+    height: 100%;
+
+    #left {
+      width: 100%;
+      height: 50%;
+      animation: 1000ms ease-out 0ms 1 slide-in-up;
+
+      h1 {
+        font-size: 30px;
+      }
+
+      h2 {
+        font-size: 22px;
+      }
+
+      p {
+        font-size: 18px;
+      }
+
+      #social-nav {
+        .social-button {
+          width: 8vmin;
+          height: 8vmin;
+          padding: 2vmin;
+        }
+      }
+    }
+
+    #site-nav {
+      a {
+        font-size: 25px;
+      }
+    }
+  }
+
+  @include overflows.mx_index_site-nav_vertical {
+    #site-nav {
+      a {
+        font-size: 22px;
+      }
+    }
+  }
+}
