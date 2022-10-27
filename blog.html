@@ -1,36 +1,41 @@
 <!DOCTYPE html>
-<html lang="tr">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Blog</title>
-    <link type="text/css" rel="stylesheet" href="styles/header.css">
-    <link type="text/css" rel="stylesheet" href="styles/general.css">
-    <script src="scripts/general.js"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+    <meta name="color-scheme" content="light dark">
+    <meta name="description" content="A blog consisting of anything I am interested in or working on!">
+    <title>Blog | fybx</title>
+    <link type="text/css" rel="stylesheet" href="assets/css/main.css">
 </head>
-<body>
-<div class="container">
-    <div id="left_column"></div> <!-- Left black box -->
-    <div id="header"></div>
-    <div id="content">
-        <div class="post">
-            <a href="posts/post1.html"><h1>Lorem Ipsum</h1></a>
-            <h5>by ferityigitbalaban, 31/12/2021</h5>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab animi, asperiores aspernatur cum deleni...</p>
-        </div>
-        <div class="post">
-            <a href="posts/post2.html"><h1>Lorem Ipsum</h1></a>
-            <h5>by ferityigitbalaban, 31/12/2021</h5>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab animi, asperiores aspernatur cum deleni...</p>
-        </div>
-        <div class="post">
-            <a href="posts/ilham-aldiklarim.html"><h1>İlham aldığım websiteleri</h1></a>
-            <h5>by fybalaban, 9/4/2022</h5>
-            <p>Bu ilk gerçek blog yazımda, sitemi geliştirdiğim süreçte ilham aldığım ve çok beğendiğim websiteleri...</p>
-        </div>
-    </div>
-    <div id="footer"></div>
-    <div id="right_column"></div> <!-- Right black box -->
-</div>
+<body class="normal">
+    <div id="bg-overlay"></div>
+    <header>
+        <input id="toggle-input" type="checkbox" autocomplete="off">
+        <label id="toggle-label" class="no-highlight" for="toggle-input">
+            <span>menu</span>
+        </label>
+        <label id="toggle-surface" for="toggle-input"></label>
+        <aside id="drawer">
+            <p id="drawer-name">ferit yiğit <b>balaban</b></p>
+            <nav id="drawer-nav">
+                <a class="drawer-navitem" href="index.html" title="home">home</a>
+                <a class="drawer-navitem" href="about.html" title="about me">about me</a>
+                <a class="drawer-navitem" href="projects.html" title="projects">projects</a>
+                <a class="drawer-navitem" href="#" title="blog">blog</a>
+                <a class="drawer-navitem" href="resume.html" title="résumé">résumé</a>
+                <a class="drawer-navitem" href="contact.html" title="privacy">contact</a>
+            </nav>
+            <a id="drawer-switch-lang" href="tr/blog.html" title="Bu sayfayı Türkçe görüntüle">Tr</a>
+        </aside>
+        <h1 id="logo" class="no-highlight">fybx.</h1>
+        <div id="shadow"></div>
+    </header>
+    <main id="content" class="under-construction">
+        <img src="assets/imgs/cone.svg" alt="Construction in progress...">
+        <p>// This page is not ready =)<br>
+            // ...<br>
+            // &copy; Ferit Yiğit BALABAN</p>
+    </main>
 </body>
 </html>
