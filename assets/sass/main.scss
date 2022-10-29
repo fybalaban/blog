@@ -57,6 +57,13 @@ ul {
   }
 }
 
+.barrier-rule {
+  color: colors.$cl_them_bright_600;
+  margin: 0;
+  border: 1px solid #fff;
+  border-bottom: 0;
+}
+
 .normal {
   // normal class
   // given to body element on a page other than index.html
