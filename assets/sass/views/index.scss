@@ -47,16 +47,17 @@ main {
 
     a {
       display: inline-block;
+      font-weight: 500;
       color: white;
-      text-decoration: none;
 
       &:hover {
-        color: colors.$cl_them_bright_100;
         font-style: italic;
+        text-decoration: underline;
       }
 
       &:active {
-        transform: scale(1.03);
+        color: colors.$cl_them_bright_100;
+        text-decoration: underline colors.$cl_them_bright_100;
       }
     }
 

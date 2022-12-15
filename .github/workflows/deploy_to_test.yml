@@ -2,7 +2,7 @@ name: Deploy artifacts on dev branch to Pages
 
 on:
   push:
-    branches: ["dev"]
+    branches: [ dev ]
 
   workflow_dispatch:
 

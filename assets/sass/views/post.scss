@@ -1,0 +1,40 @@
+@use "../fonts";
+@use "../colors";
+
+#content {
+  font: 500 16px fonts.$font-stack-mono;
+
+  h1 {
+    font: 700 36px fonts.$font-stack-v2;
+    color: colors.$cl_them_bright_100
+  }
+
+  p {
+    color: colors.$cl_them_bright_500;
+    margin: 0 0 32px 0 !important;
+  }
+
+  .content-inner {
+    color: colors.$cl_them_bright_100;
+
+    a {
+      color: inherit;
+
+      &:hover {
+        color: white;
+        font-style: italic;
+      }
+
+      &:active {
+        text-decoration: underline;
+      }
+    }
+  }
+
+  #last-update {
+    font: 500 12px fonts.$font-stack-mono;
+    font-style: italic;
+    text-decoration: underline dotted colors.$cl_them_bright_100;
+    color: colors.$cl_them_bright_100;
+  }
+}
