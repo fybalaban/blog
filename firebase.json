@@ -9,33 +9,34 @@
     "cleanUrls": true,
     "redirects": [
       {
-        "source": "x",
+        "source": "/x",
         "destination": "https://x.com/fybalaban",
         "type": 301
       },
       {
-        "source": "instagram",
+        "source": "/instagram",
         "destination": "https://instagram.com/ferityigitbalaban",
         "type": 301
       },
       {
-        "source": "medium",
+        "source": "/medium",
         "destination": "https://medium.com/@balaban",
         "type": 301
       },
       {
-        "source": "github",
+        "source": "/github",
         "destination": "https://github.com/fybx",
         "type": 301
       },
       {
-        "source": "linkedin",
+        "source": "/linkedin",
         "destination": "https://www.linkedin.com/in/fybx",
         "type": 301
       },
       {
-        "source": "mail",
-        "destination": "mailto:fybalaban@fybx.dev"
+        "source": "/mail",
+        "destination": "mailto:fybalaban@fybx.dev",
+        "type": 301
       }
     ]
   }
