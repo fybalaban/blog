@@ -5,7 +5,7 @@
       "firebase.json",
       "**/.*"
     ],
-    "trailingSlash": true,
+    "trailingSlash": false,
     "cleanUrls": true,
     "redirects": [
       {
