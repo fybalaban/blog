@@ -3,18 +3,39 @@
     "public": ".",
     "ignore": [
       "firebase.json",
-      "**/.*",
-      "**/node_modules/**"
+      "**/.*"
     ],
-    "rewrites": [
+    "trailingSlash": true,
+    "cleanUrls": true,
+    "redirects": [
       {
-        "source": "**/*.html",
-        "destination": "/$1",
+        "source": "x",
+        "destination": "https://x.com/fybalaban",
         "type": 301
       },
       {
-        "source": "**",
-        "destination": "/index.html"
+        "source": "instagram",
+        "destination": "https://instagram.com/ferityigitbalaban",
+        "type": 301
+      },
+      {
+        "source": "medium",
+        "destination": "https://medium.com/@balaban",
+        "type": 301
+      },
+      {
+        "source": "github",
+        "destination": "https://github.com/fybx",
+        "type": 301
+      },
+      {
+        "source": "linkedin",
+        "destination": "https://www.linkedin.com/in/fybx",
+        "type": 301
+      },
+      {
+        "source": "mail",
+        "destination": "mailto:fybalaban@fybx.dev"
       }
     ]
   }
