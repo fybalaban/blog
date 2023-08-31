@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<!--suppress ALL -->
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta content="width=device-width, initial-scale=1" name="viewport">
+
+    <title>Let me get you some Pitbull!</title>
+
+    <style>
+        @keyframes fade-in {
+            from {
+                opacity: 0
+            }
+            to {
+                opacity: 1
+            }
+        }
+
+        @keyframes hue-rotate {
+            from {
+                backdrop-filter: brightness(0.4) saturate(1.5) hue-rotate(0);
+            }
+
+            to {
+                backdrop-filter: brightness(0.4) saturate(1.5) hue-rotate(360deg);
+            }
+        }
+
+        html {
+            height: -webkit-fill-available;
+            height: -moz-available;
+            height: fill-available;
+            margin: 0;
+            padding: 0;
+            scroll-behavior: smooth;
+        }
+
+        body {
+            min-height: -webkit-fill-available;
+            min-height: -moz-available;
+            min-height: fill-available;
+            margin: 0;
+            padding: 0;
+            scroll-behavior: smooth;
+
+            animation: hue-rotate linear 5s infinite;
+            background-color: #d399ff;
+            background-image: radial-gradient(at 34% 78%, hsla(184, 92%, 63%, 1) 0px, transparent 50%),
+            radial-gradient(at 16% 87%, hsla(326, 98%, 71%, 1) 0px, transparent 50%),
+            radial-gradient(at 97% 54%, hsla(280, 61%, 74%, 1) 0px, transparent 50%),
+            radial-gradient(at 33% 26%, hsla(288, 74%, 66%, 1) 0px, transparent 50%),
+            radial-gradient(at 42% 57%, hsla(257, 62%, 64%, 1) 0px, transparent 50%),
+            radial-gradient(at 1% 38%, hsla(161, 97%, 71%, 1) 0px, transparent 50%),
+            radial-gradient(at 72% 88%, hsla(358, 97%, 65%, 1) 0px, transparent 50%);
+            backdrop-filter: brightness(0.4) saturate(1.5);
+            font: 400 24px sans-serif;
+            color: white;
+
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+
+        section {
+            width: 100%;
+            height: 100%;
+            display: flex;
+            flex: 1;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+
+        h2 {
+            margin: 0;
+        }
+
+        h1 {
+            margin: 0;
+            margin-bottom: 12px;
+            animation: fade-in 1000ms ease-in;
+        }
+    </style>
+</head>
+<body>
+
+<section>
+    <h1>Mr. Worldwide!</h1>
+    <h2 id="countdown">3</h2>
+</section>
+
+<script defer>
+    const pitbull = [
+        "https://music.youtube.com/watch?v=GcYF1xnmZTI&si=GiYP26G9eSLSu8Tb",
+        "https://music.youtube.com/watch?v=E2lX1ZovtcA&si=LaucNr_q6qXU9_7p",
+        "https://music.youtube.com/watch?v=soIys2qaWhs&si=QegtcvCy6JmU6g9Z",
+        "https://music.youtube.com/watch?v=P7sbjPggfkU&si=i2Pp18iLNwK_5gE-",
+        "https://music.youtube.com/watch?v=OLqaMYc9LFE&si=jll0IUg4y-wDBDEx",
+        "https://music.youtube.com/watch?v=0YYWgKTgAQw&si=Vist8B-ZrbWRcbUA",
+        "https://music.youtube.com/watch?v=IL74nTSQxds&si=jTpxkT8Oj798u8Wm",
+        "https://music.youtube.com/watch?v=OVjXzMlGuCw&si=k_XrjpyjCnLeOBrH",
+        "https://music.youtube.com/watch?v=Yme16pDhoTI&si=egNpe3Ev7KDF13sp",
+        "https://music.youtube.com/watch?v=AN2-czGsblw&si=UZ-JOnoQrjeajx8p",
+        "https://music.youtube.com/watch?v=bFOAZD6P4QE&si=DzTEgjFWucAnvmch",
+        "https://music.youtube.com/watch?v=YgqaFSPK2Ok&si=xpLehGvhCvhQSlde",
+        "https://music.youtube.com/watch?v=Cz_-eTAWr9A&si=ycXzOBfVQRyOJ-bD",
+        "https://music.youtube.com/watch?v=wc5ZeWdcePk&si=zRS6dSRBTLNsceTT",
+        "https://music.youtube.com/watch?v=taKqviuwPAs&si=6B721FXKV8Jn7r60",
+        "https://music.youtube.com/watch?v=b_cfb0eyuCQ&si=yVBSlSujYS3txkGn",
+        "https://music.youtube.com/watch?v=g7zLroNIIfg&si=TNpr1BiAhiuB0sGj",
+        "https://music.youtube.com/watch?v=UogRSXydc9w&si=CP-F2Mur4sdjuY7L",
+        "https://music.youtube.com/watch?v=Sd0PHywJxnw&si=WTiA-591y67_RUvk",
+        "https://music.youtube.com/watch?v=qX0lNQG2TEc&si=gVc9nlLcHPlqoSep",
+        "https://music.youtube.com/watch?v=2NVA7edNYaM&si=Kknqq1kVOFO2Qev1",
+    ];
+
+    function updateCountdown(count) {
+        const countdownElement = document.getElementById('countdown');
+        countdownElement.textContent = count;
+    }
+
+    function redirect() {
+        const randomIndex = Math.floor(Math.random() * pitbull.length);
+        window.location.href = pitbull[randomIndex];
+    }
+
+    function startCountdown() {
+        let count = 5;
+
+        updateCountdown(count);
+
+        function countdown() {
+            count--;
+            if (count === 0) {
+                document.getElementById('countdown').textContent = '¡Dale!';
+                setTimeout(countdown, 1000);
+            } else if (count === -1)
+                redirect();
+            else {
+                updateCountdown(count);
+                setTimeout(countdown, 1000);
+            }
+        }
+
+        countdown();
+    }
+
+    function changeColorSlowly() {
+        const h2Element = document.getElementById('countdown');
+        let hue = 270;
+        const targetHue = 0;
+
+        const colorChangeInterval = setInterval(function () {
+            if (hue > targetHue) {
+                hue--;
+                h2Element.style.color = `hsl(${hue}, 100%, 50%)`;
+            } else {
+                clearInterval(colorChangeInterval);
+            }
+        }, 15);
+    }
+
+    window.addEventListener('load', changeColorSlowly);
+    window.addEventListener('load', startCountdown);
+</script>
+</body>
+</html>
