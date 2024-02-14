@@ -1,0 +1,21 @@
+@use '../partials/fonts';
+@use '../partials/colors';
+
+#hero {
+	h1 {
+		font: 400 48px fonts.$font-sans;
+
+		.txt-rotate {
+			font: 400 48px fonts.$font-serif;
+			font-style: italic;
+
+			background: colors.$gradient-main;
+			-webkit-text-fill-color: transparent;
+			color: transparent;
+
+			-webkit-background-clip: text;
+			-moz-background-clip: text;
+			background-clip: text;
+		}
+	}
+}
