@@ -1,41 +1,94 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="tr">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1"/>
-    <meta name="color-scheme" content="light dark">
-    <meta name="description" content="Ferit Yiğit BALABAN's online résumé.">
-    <title>Résumé | fybx</title>
-    <link type="text/css" rel="stylesheet" href="assets/css/main.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>İletişim</title>
+    <link type="text/css" rel="stylesheet" href="styles/header.css">
+    <link type="text/css" rel="stylesheet" href="styles/resume.css">
+    <link type="text/css" rel="stylesheet" href="styles/general.css">
+    <script src="scripts/general.js"></script>
 </head>
-<body class="normal">
-    <div id="bg-overlay"></div>
-    <header>
-        <input id="toggle-input" type="checkbox" autocomplete="off">
-        <label id="toggle-label" class="no-highlight" for="toggle-input">
-            <span>menu</span>
-        </label>
-        <label id="toggle-surface" for="toggle-input"></label>
-        <aside id="drawer">
-            <p id="drawer-name">ferit yiğit <b>balaban</b></p>
-            <nav id="drawer-nav">
-                <a class="drawer-navitem" href="index.html" title="home">home</a>
-                <a class="drawer-navitem" href="about.html" title="about me">about me</a>
-                <a class="drawer-navitem" href="projects.html" title="projects">projects</a>
-                <a class="drawer-navitem" href="blog.html" title="blog">blog</a>
-                <a class="drawer-navitem" href="#" title="résumé">résumé</a>
-                <a class="drawer-navitem" href="contact.html" title="privacy">contact</a>
-            </nav>
-            <a id="drawer-switch-lang" href="tr/cv.html" title="Bu sayfayı Türkçe görüntüle">Tr</a>
-        </aside>
-        <h1 id="logo" class="no-highlight">fybx.</h1>
-        <div id="shadow"></div>
-    </header>
-    <main id="content" class="under-construction">
-        <img src="assets/imgs/cone.svg" alt="Construction in progress...">
-        <p>// This page is not ready =)<br>
-            // ...<br>
-            // &copy; Ferit Yiğit BALABAN</p>
-    </main>
+<body>
+<div class="container">
+    <div id="left_column"></div> <!-- Left black box -->
+    <div id="header"></div>
+    <div id="content">
+        <div id="about">
+            <h1>Hakkımda</h1>
+            <p>
+                2003 yılının Temmuz ayında Karacabey, Bursa'da doğdum. Küçüklüğümden beri teknolojik aletlerin varlığı beni büyülüyordu. Dört yaşımdayken ilk defa bilgisayar kullandım. Altıncı yaşımdayken interneti kullanmaya başladım. Okuma yazma öğrendikten sonra senelerce Wikipedia'da farklı konular hakkında makaleler okuyarak vaktimi geçirdim.
+            </p>
+            <p>
+                Bilgisayarların nasıl çalıştığını, elektrik denen ve gözle göremediğimiz şeyin bunca işi nasıl başardığını merak ediyordum. 6. sınıfta Scratch kullanarak kendi işletim sistemi simülasyonumu yazdım. Program yazmaya olan merakım bu dönemlerde başladı.
+            </p>
+            <p>
+                4 sene boyunca .NET ekosisteminde Windows için program geliştirdim. Şu anda cross-platform geliştirmeye yönelik çalışıyorum. GNU/Linux kullanıyorum, açık kaynaklı programları tercih ediyorum ve büyük şirketlerin kâr amaçlı ürünlerinden uzak durmaya çalışıyorum.
+            </p>
+            <p>
+                Amacım gelecek jenerasyonlara açık kaynağın önemini gösterebilmek, teknolojik okuryazarlık kazandırabilmek ve başarılı mühendisler yetiştirmeye katkıda bulunmak.
+            </p>
+        </div>
+        <div id="educt">
+            <h1>Eğitim</h1>
+            <table>
+                <tr>
+                    <td class="tableYear">
+                        2015 - 2017
+                    </td>
+                    <td class="tableContent">
+                        <p>
+                            Bursa Karacabey Tan Okulu Ortaokulu
+                        </p>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="tableYear">
+                        2017 - 2021
+                    </td>
+                    <td class="tableContent">
+                        <p>
+                            Bursa Karacabey Ulviye Matlı Fen Lisesi | Diploma Notu: 94.32
+                        </p>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="tableYear">
+                        <p>2021 - 2025</p>
+                    </td>
+                    <td class="tableContent">
+                        <p>
+                            Bursa Uludağ Üniversitesi | Bilgisayar Mühendisliği Lisans Programı
+                        </p>
+                    </td>
+                </tr>
+            </table>
+        </div>
+        <div id="hobby">
+            <h1>Hobilerim</h1>
+            <ul>
+                <li>Müzik dinlemek</li>
+                <li>Bilgisayar bilimi çalışmak</li>
+                <li>Doğa yürüyüşü yapmak</li>
+                <li>Bisiklet sürmek</li>
+            </ul>
+        </div>
+        <div id="contact">
+            <h1>İletişim</h1>
+            <ul>
+                <li>Bursa, Türkiye</li>
+                <li><a href="mailto:ferityigitbalaban@gmail.com">fyb@duck.com</a></li>
+                <li><a href="mailto:f@fybx.dev">f@fybx.dev</a></li>
+                <li>
+                    <a href="https://linkedin.com/in/fybx"><img class="logo" src="https://cdn.svgporn.com/logos/linkedin-icon.svg?response-content-disposition=attachment%3Bfilename%3Dlinkedin-icon.svg" alt="LinkedIn icon"></a>
+                    <a href="https://twitter.com/fybxdev"><img class="logo" src="https://cdn.svgporn.com/logos/twitter.svg?response-content-disposition=attachment%3Bfilename%3Dtwitter.svg" alt="Twitter icon"></a>
+                    <a href="https://github.com/fybx"><img class="logo" src="https://cdn.svgporn.com/logos/github-icon.svg?response-content-disposition=attachment%3Bfilename%3Dgithub-icon.svg" alt="GitHub icon"></a>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <div id="footer"></div>
+    <div id="right_column"></div> <!-- Right black box -->
+</div>
 </body>
 </html>
