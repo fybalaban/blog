@@ -3,3 +3,29 @@
 
 @use "partials/fonts";
 @use "partials/colors";
+
+html, body {
+    margin: 0;
+    padding: 0;
+
+    background-color: #101010;
+    color: #FFFFFF;
+}
+
+body {
+    min-height: 100svh;
+    min-height: 100vh;
+
+    display: grid;
+    grid-template-columns: 1fr 960px 1fr;
+
+    @media (max-width: 960px) {
+        grid-template-columns: 0 1fr 0;
+    }
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+}
+
