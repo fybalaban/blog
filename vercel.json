@@ -1,0 +1,15 @@
+{
+  "cleanUrls": true,
+  "redirects": [
+    {
+      "source": "/v1/:path*",
+      "destination": "https://v1.fybx.dev/:path*",
+      "statusCode": 301
+    },
+    {
+      "source": "/x",
+      "destination": "https://x.com/fybalaban",
+      "statusCode": 301
+    }
+  ]
+}
