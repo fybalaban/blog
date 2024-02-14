@@ -9,7 +9,7 @@ Active development & archival repository of my personal website. You can find my
 
 ## Development
 
-This website is built using [Jekyll][1] static site generator. All the styling is done with SCSS and [The Genesis Framework][2].
+This website is built using pure HTML, CSS & JavaScript. All the styling is done with SCSS and [The Genesis Framework][2].
 
 Yiğid BALABAN, \<[fyb@fybx.dev][llemail]>
 
@@ -19,5 +19,4 @@ This project uses [The Genesis Framework][2], a free and open source front-end f
 
 [llemail]: mailto:fyb@fybx.dev
 
-[1]: https://jekyllrb.com "Jekyll"
-[2]: https://git.arbeit.studio/genesis "The Genesis Framework"
+[1]: https://git.arbeit.studio/genesis "The Genesis Framework"
