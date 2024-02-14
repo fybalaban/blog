@@ -1,0 +1,54 @@
+//
+//  yigid balaban,  <fyb@fybx.dev>
+//  blog            2024
+//
+@use 'fonts';
+@use 'colors';
+
+header {
+  margin: 48px 16px 96px;
+  width: 100%;
+  place-self: center;
+
+  display: flex;
+  box-sizing: border-box;
+  padding: 24px 32px;
+  justify-content: space-between; 
+  align-items: center;
+
+  border-radius: 24px;
+  border: 1px solid rgba(255, 255, 255, 0.40);
+  background: linear-gradient(92deg, rgba(255, 255, 255, 0.10) 0%, rgba(255, 255, 255, 0.05) 38.04%, rgba(255, 255, 255, 0.15) 70.04%, rgba(255, 255, 255, 0.05) 100%);
+  backdrop-filter: blur(8px);
+	font: 400 32px fonts.$font-sans;
+
+	h1 {
+    margin: 0;
+		background: colors.$gradient-main;
+		-webkit-text-fill-color: transparent;
+		color: transparent;
+
+		-webkit-background-clip: text;
+		-moz-background-clip: text;
+		background-clip: text;
+
+    font-size: 32px;
+	}
+
+	nav {
+		a {
+      color: #FFFFFF;
+      text-decoration: none;
+
+			&:after {
+				display: inline-block;
+				margin: 0 8px;
+				content: '·';
+			}
+
+			&:last-of-type:after {
+				content: none;
+			}
+		}
+	}
+}
