@@ -1,0 +1,10 @@
+@use "partials/header";
+@use "partials/footer";
+
+@use "partials/fonts";
+@use "partials/colors";
+
+html, body {
+    margin: 0;
+    padding: 0;
+}
