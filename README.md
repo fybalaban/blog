@@ -1,3 +1,23 @@
-# blog [![pages-build-deployment](https://github.com/fybx/blog/actions/workflows/pages/pages-build-deployment/badge.svg?branch=main)](https://github.com/fybx/blog/actions/workflows/pages/pages-build-deployment) [![Deploy to Firebase Hosting on merge](https://github.com/fybx/blog/actions/workflows/firebase-hosting-merge.yml/badge.svg?branch=dev)](https://github.com/fybx/blog/actions/workflows/firebase-hosting-merge.yml)
-- Branch `main` is served by GitHub Pages at [fybx.dev](https://fybx.dev)
-- Branch `dev` is for development & testing, and is active at https://fybxdev.web.app/
+# fybx/blog
+
+Active development & archival repository of my personal website. You can find my works, resume, blog posts and more here.
+
+| Branch | Endpoint            | Details                       |
+| ------ | ------------------- | ----------------------------- |
+| `main` | https://fybx.dev    | Current version of my website |
+| `v1`   | https://v1.fybx.dev | My second personal portfolio. |
+
+## Development
+
+This website is built using [Jekyll][1] static site generator. All the styling is done with SCSS and [The Genesis Framework][2].
+
+Yiğid BALABAN, \<[fyb@fybx.dev][llemail]>
+
+---
+
+This project uses [The Genesis Framework][2], a free and open source front-end framework for the next generation of the Web.
+
+[llemail]: mailto:fyb@fybx.dev
+
+[1]: https://jekyllrb.com "Jekyll"
+[2]: https://git.arbeit.studio/genesis "The Genesis Framework"
