@@ -3,10 +3,10 @@
 
 #hero {
 	h1 {
-		font: 400 48px fonts.$font-sans;
+		font: 400 3rem fonts.$font-sans;
 
 		.txt-rotate {
-			font: 400 48px fonts.$font-serif;
+			font: 400 3rem fonts.$font-serif;
 			font-style: italic;
 
 			background: colors.$gradient-main;
@@ -17,5 +17,9 @@
 			-moz-background-clip: text;
 			background-clip: text;
 		}
+	}
+
+	p {
+		font: 1.5rem fonts.$font-serif;
 	}
 }
