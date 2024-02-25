@@ -1,6 +1,9 @@
 @use '../partials/fonts';
 @use '../partials/colors';
 
+@use '../components/buttons/arrow';
+
+
 #hero {
 	h1 {
 		font: 400 3rem fonts.$font-sans;
