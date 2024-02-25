@@ -3,6 +3,13 @@
 
 @use '../components/buttons/arrow';
 
+p {
+	font: 1.5rem fonts.$font-serif;
+}
+
+main {
+	row-gap: 6rem;
+}
 
 #hero {
 	h1 {
