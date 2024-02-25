@@ -27,6 +27,22 @@ main {
 	}
 }
 
+.section {
+	.title {
+		margin-bottom: 3rem;
+
+		h1 {
+			margin: 0.75rem 0 0 0;
+			font: 400 3rem fonts.$font-sans;
+		}
+		
+		h2 {
+			margin: 0;
+			font: 400 1rem fonts.$font-serif;
+		}
+	}
+}
+
 #hero {
 	h1 {
 		font: 400 3rem fonts.$font-sans;
