@@ -11,6 +11,22 @@ main {
 	row-gap: 6rem;
 }
 
+// This section overrides some properties from
+// the card-modern-vcard component of genesis
+.card-modern-vcard {
+	max-width: 320px !important;
+
+	.cmv-text {
+		h1 {
+			font-family: fonts.$font-sans;
+		}
+
+		h2 {
+			font-family: fonts.$font-serif;
+		}
+	}
+}
+
 #hero {
 	h1 {
 		font: 400 3rem fonts.$font-sans;
