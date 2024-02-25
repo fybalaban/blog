@@ -19,9 +19,9 @@ body {
     min-height: 100vh;
 
     display: grid;
-    grid-template-columns: 1fr 960px 1fr;
+    grid-template-columns: 1fr 1080px 1fr;
 
-    @media (max-width: 960px) {
+    @media (max-width: 1080px) {
         grid-template-columns: 0 1fr 0;
     }
 }
@@ -29,6 +29,10 @@ body {
 main {
     display: flex;
     flex-direction: column;
+
+    @media (max-width: 1080px) {
+        margin: 0 1rem;
+    }
 }
 
 a, .no-highlight {
