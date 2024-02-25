@@ -45,6 +45,7 @@ main {
 
 #hero {
 	h1 {
+		margin: 0;
 		font: 400 3rem fonts.$font-sans;
 
 		.txt-rotate {
@@ -61,7 +62,7 @@ main {
 		}
 	}
 
-	p {
-		font: 1.5rem fonts.$font-serif;
+	.arrow-button {
+		font-family: fonts.$font-sans;
 	}
 }
