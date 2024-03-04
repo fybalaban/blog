@@ -28,7 +28,7 @@ header {
 	backdrop-filter: blur(8px);
 	font: 400 2rem fonts.$font-sans;
 
-	h1 {
+	.make-it-fabulous {
 		margin: 0;
 		background: colors.$gradient-main;
 		-webkit-text-fill-color: transparent;
@@ -45,6 +45,7 @@ header {
 		a {
 			color: #ffffff;
 			text-decoration: none;
+			text-shadow: #FF6681 1px 1px 1px;
 
 			&:after {
 				display: inline-block;
@@ -55,6 +56,27 @@ header {
 			&:last-of-type:after {
 				content: none;
 			}
+		}
+	}
+
+	@media (max-width: 640px) {
+		padding: 0.75rem 1rem;
+		font-size: 1.5rem;
+
+		h1 {
+			font-size: 1.5rem;
+		}
+	}
+
+	@media (max-width: 500px) {
+		font-size: 1.25rem;
+	}
+
+	@media (max-width: 450px) {
+		font-size: 1rem;
+
+		h1 {
+			font-size: 1rem;
 		}
 	}
 }
