@@ -1,6 +1,23 @@
+@use '../partials/fonts';
+
 body {
 	position: relative;
 	z-index: 0;
+}
+
+article {
+	@for $i from 1 through 6 {
+		h#{$i} {
+			font: 400 2.75rem - ($i * 0.25) fonts.$font-sans;
+		}
+	}
+
+	p {
+		font: 400 1.25rem fonts.$font-serif;
+	}
+	.post-subtitle {
+		font: 400 1rem fonts.$font-sans;
+	}
 }
 
 .fade-in-backdrop {
