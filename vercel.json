@@ -20,6 +20,11 @@
       "source": "/instagram",
       "destination": "https://instagram.com/ferityigitbalaban",
       "statusCode": 301
+    },
+    {
+      "source": "/telegram",
+      "destination": "https://t.me/fybalaban",
+      "statusCode": 301
     }
   ]
 }
