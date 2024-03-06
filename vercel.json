@@ -10,6 +10,16 @@
       "source": "/x",
       "destination": "https://x.com/fybalaban",
       "statusCode": 301
+    },
+    {
+      "source": "/twitter",
+      "destination": "https://twitter.com/fybalaban",
+      "statusCode": 301
+    },
+    {
+      "source": "/instagram",
+      "destination": "https://instagram.com/ferityigitbalaban",
+      "statusCode": 301
     }
   ]
 }
