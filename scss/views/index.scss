@@ -27,6 +27,14 @@ main {
 	}
 }
 
+.card-modern-hcard {
+	font-family: fonts.$font-sans;
+
+	h2 {
+		font-family: fonts.$font-serif;
+	}
+}
+
 .section {
 	.title {
 		margin-bottom: 3rem;
@@ -48,7 +56,7 @@ main {
 		margin: 0;
 		font: 400 3rem fonts.$font-sans;
 
-		.txt-rotate {
+		.txt-morph {
 			font: 400 3rem fonts.$font-serif;
 			font-style: italic;
 
