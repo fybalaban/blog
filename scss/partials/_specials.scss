@@ -1,0 +1,15 @@
+@use "colors";
+
+@mixin text-gradient($color) {
+  background: $color;
+  -webkit-text-fill-color: transparent;
+  color: transparent;
+
+  -webkit-background-clip: text;
+  -moz-background-clip: text;
+  background-clip: text;
+}
+
+@mixin make-it-sassy {
+  @include text-gradient(colors.$gradient-main);
+}
