@@ -1,8 +1,8 @@
-@use "partials/header";
-@use "partials/footer";
-
 @use "partials/fonts";
 @use "partials/colors";
+
+@use "partials/header";
+@use "partials/footer";
 
 html, body {
     margin: 0;
