@@ -3,3 +3,4 @@
 *.css.map
 *.cache
 assets/css/
+.vercel
