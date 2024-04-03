@@ -1,0 +1,7 @@
+<a href="https://fybx.dev/">
+  <img 
+    alt="fybx.dev: now available with hyprtext on 443!" 
+    src=""
+    width="80"
+    height="30" />
+</a>
