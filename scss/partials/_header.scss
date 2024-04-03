@@ -4,6 +4,7 @@
 //
 @use 'fonts';
 @use 'colors';
+@use 'specials';
 
 header {
 	margin: 48px 16px 96px;
@@ -30,13 +31,7 @@ header {
 
 	.make-it-fabulous {
 		margin: 0;
-		background: colors.$gradient-main;
-		-webkit-text-fill-color: transparent;
-		color: transparent;
-
-		-webkit-background-clip: text;
-		-moz-background-clip: text;
-		background-clip: text;
+		@include specials.make-it-sassy;
 
 		font-size: 2rem; // do not remove this!!!!
 	}
