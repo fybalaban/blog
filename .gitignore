@@ -2,5 +2,6 @@
 .vs/
 *.css.map
 *.cache
-assets/css/
+# TODO: Remove this line when you switch to scaffoldingjs
+# assets/css/
 .vercel
